@@ -4,12 +4,12 @@ import { TouchableOpacity } from 'react-native-web';
 import { useFonts, Poppins_400Regular } from '@expo-google-fonts/inter';
 
 export default function App() {
-  export default () => {
-    let [fontsLoaded] = useFonts({
+  // export default () => {
+  //   let [fontsLoaded] = useFonts({
   
-      Poppins_400Regular,
+  //     Poppins_400Regular,
   
-    });
+  //   });
   
   return (
 
@@ -97,4 +97,4 @@ export default function App() {
       marginBottom: 20,
       marginTop: 100,
     }
-  })}
+  })
