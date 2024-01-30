@@ -1,6 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import { useEffect, useState } from 'react';
-import { StyleSheet, Text, Touchable, TouchableOpacity, View } from 'react-native';
+import { Alert, StyleSheet, Text, Touchable, TouchableOpacity, View, } from 'react-native';
+import { Container } from './src/components/Container/Container';
+import { Title, TitleBtnIncrement, TitleBtnDecrement } from './src/components/Title/Title';
+import { BtnIncrement, BtnDecrement } from './src/components/Btns/Btn'
 
 export default function App() {
 
@@ -13,7 +16,12 @@ export default function App() {
   }
 
   const decrementar = () => {
-    setCount(count - 1)
+    if (count > 0 ) {
+      setCount(count - 1)
+      
+    } else {
+      Alert.alert('Contador não pode ser menor que zero !');
+    }
   }
 
   useEffect(() => {
@@ -21,44 +29,26 @@ export default function App() {
   }, [count])
 
   return (
-    <View style={styles.container}>
+    <Container>
 
-      <Text>Contador: {count}</Text>
+      {/* title */}
+      <Title>Contador: {count}</Title>
 
-      <TouchableOpacity onPress={increment}>
-        <Text style = {styles.text1}>incrementar</Text>
-      </TouchableOpacity>
+      {/* BtnIncrement */}
+      <BtnIncrement onPress={increment}>
 
-      <TouchableOpacity onPress={decrementar}>
-      <Text style = {styles.text2}>Decrementar</Text>
-      </TouchableOpacity>
+        {/* TitleBtnIncrement */}
+        <TitleBtnIncrement>incrementar</TitleBtnIncrement>
+      </BtnIncrement>
+
+      {/* BtnDecrement */}
+      <BtnDecrement onPress={decrementar}>
+        
+        {/* TitleBtnDecrement */}
+      <TitleBtnDecrement>Decrementar</TitleBtnDecrement>
+      </BtnDecrement>
 
       <StatusBar style="auto" />
-    </View>
+    </Container>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  text1: {
-      borderWidth: 1,
-      padding: 10,
-      borderRadius: 10,
-      borderColor: 'black',
-      marginTop: 10,
-      color: 'purple'
-  },
-  text2: {
-    borderWidth: 1,
-    padding: 10,
-    borderRadius: 10,
-    borderColor: 'black',
-    marginTop: 10,
-    color: 'blue'
-}
-});
