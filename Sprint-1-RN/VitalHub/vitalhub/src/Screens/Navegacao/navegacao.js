@@ -7,6 +7,7 @@ export const Navegacao = ({ navigation }) => {
                 title="Login"
                 onPress={() => navigation.navigate("Login")}
             />
+            
         </View>
     )
 }

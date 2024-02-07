@@ -13,3 +13,7 @@ export const ContainerForm = styled.SafeAreaView`
     margin: 20px auto;
     gap: 20px;
 `
+
+export const ContainerInput = styled.SafeAreaView`
+    columns: row;
+`

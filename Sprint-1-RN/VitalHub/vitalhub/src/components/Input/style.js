@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const Input = styled.TextInput.attrs({
     placeholderTextColor: "white"
-})`
-
-margin-top: 20px;
+})
+`
+margin-top: 30px;
 border: 1px;
 border-radius: 5px;
 border-color: #F8F8F8;

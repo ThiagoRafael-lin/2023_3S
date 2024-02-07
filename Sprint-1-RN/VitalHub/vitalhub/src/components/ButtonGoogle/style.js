@@ -1,28 +1,26 @@
 import styled from "styled-components";
 
-export const Button = styled.TouchableOpacity`
-
+export const ButtonGoogle = styled.TouchableOpacity`
+flex-direction: row;
 border: 1px;
 border-width: 1px;
 padding: 10px;
 width: 90%;
 justify-content: center;
 align-items: center;
-border-color: #496BBA;
+border-color: white;
 border-radius: 5px;
-background-color: #496BBA;
+background-color: white;
+margin-top: 15px;
+gap: 20px;
 
 `
-
-export const ButtonTitle = styled.Text`
+export const ButtonTitleGoogle = styled.Text`
 
 font-family: MontserratAlternates_600SemiBold;
-color: white;
 text-transform: uppercase;
 
+color: #496BBA;
 
-`
 
-export const ButtonRecuperar = styled(Button)`
-margin-top: 25px;
 `

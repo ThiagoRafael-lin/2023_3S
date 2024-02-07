@@ -1,51 +1,45 @@
 import { useEffect, useState } from "react";
-import { BoxInput } from "../../BoxInput";
-import { FieldContentEstado, FieldContentMedium, FieldContentUF } from "../../BoxInput/style";
-import { ContainerForm, ScroolForm } from "./style";
-import { Alert } from "react-native";
-import axios from "axios";
-
+import { BoxInput } from "../../BoxInput/index";
+import { ContainerForm, ScroolForm, ContainerInput } from "./style";
+import api from "../../Services/services"
 
 export function Home() {
 
-    //states - váriaveis
-    const [cep, setCep] = useState("");
-    const [logradouro, setLogradouro] = useState("");
-    const [bairro, setBairro] = useState("");
-    const [cidade, setCidade] = useState(""); 
-    const [estado, setEstado] = useState("");
-    const [uf, setUf] = useState("");
+    //states - variaveis
+    const [endereco, setEndereco] = useState({
+        cep: '',
+        logradouro: null,
+        bairro: null,
+        cidade: null,
+        estado: null,
+        uf: null,
+    });
 
-    //useEffect - váriaveis
+
+    async function getEndereco() {
+        try {
+            const promise = await api.get(`https://api.postmon.com.br/v1/cep/${endereco.cep}`);
+            console.warn('concluido!');
+            setEndereco({
+                ...endereco,
+                logradouro: promise.data.logradouro,
+                bairro: promise.data.bairro,
+                estado: promise.data.estado_info.nome,
+                cidade: promise.data.cidade,
+                uf: promise.data.estado,
+            });
+            console.warm('Salvo!');
+
+        } catch (error) {
+            console.log('erro ocorrido');
+        }
+    }
 
     useEffect(() => {
-
-        async function buscarCep () {
-            try {
-                if (cep != '' && length === 8) {
-                    const endereco = await axios.get(`https://brasilaberto.com/api/v1/zipcode/${cep}`)
-
-                    if (endereco.error) {
-                        return;
-                    }
-
-                    setLogradouro(endereco.data.result.street)
-                    setBairro(endereco.data.result.district)
-                    setCidade(endereco.data.result.city)
-                    setEstado(endereco.data.result.state)
-                    setUf(endereco.data.result.stateShortname)
-
-                    console.log(bairro);
-
-                }
-            } catch (error) {
-                console.log("Erro ao buscar CEP");
-            }
+        if (endereco.cep.length >= 8) {
+            getEndereco();
         }
-
-         buscarCep();
-
-    }, [cep])
+    }, [endereco.cep])
 
     return (
         <>
@@ -53,66 +47,52 @@ export function Home() {
                 <ContainerForm>
                     <BoxInput
                         textLabel='Informar CEP'
-                        placeholder="CEP..."
-                        keyType="numeric"
-                        maxLength={8}
+                        placeholder='CEP...'
+                        KeyType='numeric'
+                        MaxLenght={9}
                         editable={true}
-                        fieldValue={cep}
-                        onChangeText={(tx) => {setCep(tx)}}
-                        // onChangeText={ e => setCep(e)}s
+                        onChangeText={event => setEndereco({ ...endereco, cep: event })}
                     />
+
                     <BoxInput
-                        textLabel='Logradouro'
-                        placeholder="Logradouro..."
-                        keyType="text"
-                        fieldValue={logradouro}
-                    // maxLength={9}
+                        textLabel='Logradouro:'
+                        placeholder='Logradouro...'
+                        MaxLenght={20}
+                        fieldValue={endereco.logradouro}
                     />
                     <BoxInput
                         textLabel='Bairro'
-                        placeholder="Bairro..."
-                        keyType="text"
-                        fieldValue={bairro}
+                        placeholder='Bairro...'
+                        MaxLenght={20}
 
-                    // maxLength={9}
+                        fieldValue={endereco.bairro}
                     />
                     <BoxInput
                         textLabel='Cidade'
-                        placeholder="Cidade..."
-                        keyType="text"
-                        fieldValue={cidade}
-
-                    // maxLength={9}
+                        placeholder='Cidade...'
+                        MaxLenght={20}
+                        fieldValue={endereco.cidade}
                     />
-                    <FieldContentMedium>
-                        <FieldContentEstado>
+                    <ContainerInput>
+                        <BoxInput
+                            textLabel='Estado'
+                            placeholder='Estado...'
+                            MaxLenght={20}
+                            fieldValue={endereco.estado}
+                        />
 
-                            <BoxInput
-                                textLabel='Estado'
-                                placeholder="Estado..."
-                                keyType="text"
-                                fieldWidth={168}
-                                fieldValue={estado}
-
-                            // maxLength={9}
-                            />
-                        </FieldContentEstado>
-                        <FieldContentUF>
-
-                            <BoxInput
-                                textLabel='UF'
-                                placeholder="UF"
-                                keyType="text"
-                                maxLength={20}
-                                fieldValue={uf}
-
-                            />
-                        </FieldContentUF>
-
-                    </FieldContentMedium>
+                        <BoxInput
+                            textLabel='UF'
+                            placeholder='UF...'
+                            MaxLenght={4}
+                            fieldValue={endereco.uf}
+                        />
+                    </ContainerInput>
 
                 </ContainerForm>
             </ScroolForm>
         </>
+
+
     )
 }
