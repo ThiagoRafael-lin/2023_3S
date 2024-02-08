@@ -6,10 +6,14 @@ import { Quicksand_600SemiBold, Quicksand_500Medium } from '@expo-google-fonts/q
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
+
+
 import { Navegacao } from './src/Screens/Navegacao/navegacao';
 import { Login } from './src/Screens/Login/login';
 import { esqueceuSuaSenha } from './src/Screens/EsqueceuSenha/esqueceuSenha';
-import { Container } from './src/components/Containers/style';
+import { verificarEmail } from './src/Screens/VerifiqueEmail/verificarSenha'
+import { redefinirSenha } from './src/Screens/RedefinirSenha/redefinirSenha'
+import { criarAConta } from './src/Screens/CriarConta/criarConta';
 
 
 export default function App() {
@@ -31,6 +35,8 @@ export default function App() {
   const Stack = createNativeStackNavigator();
 
   return (
+
+
 
       //container - envolve toda a estrutura
         //navigator - componente para a navegação 
@@ -65,6 +71,31 @@ export default function App() {
             options={{title: "EsqueceuSuaSenha"}}
 
             />
+
+            <Stack.Screen
+
+            name="verificarEmail"
+            component={verificarEmail}
+            options={{title: "verificarEmail"}}
+
+            />
+
+            <Stack.Screen
+
+            name="redefinirSenha"
+            component={redefinirSenha}
+            options={{title: "redefinirSenha"}}
+
+            />
+
+            <Stack.Screen
+
+            name="criarAConta"
+            component={criarAConta}
+            options={{title: "criarAConta"}}
+
+            />
+
 
           </Stack.Navigator>
       </NavigationContainer>

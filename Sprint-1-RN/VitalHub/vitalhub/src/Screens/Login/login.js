@@ -52,7 +52,9 @@ export const Login = ({navigation}) => {
             <ContentAccount>
                 <TextAccount>
                     Não tem conta?
-                    <LinkAccount>
+                    <LinkAccount
+                                onPress={() => navigation.navigate('criarAConta')}
+                    >
                         Crie uma agora!
                     </LinkAccount>
                 </TextAccount>

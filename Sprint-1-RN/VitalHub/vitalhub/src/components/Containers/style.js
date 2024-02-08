@@ -7,3 +7,12 @@ align-items: center;
 background-color: #49B3BA;
 
 `
+
+export const ContainerVerificacao = styled.SafeAreaView`
+
+flex-direction: row;
+/* gap: 20px; */
+width: 80%;
+justify-content: space-between;
+
+`
