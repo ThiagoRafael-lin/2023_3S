@@ -16,3 +16,8 @@ width: 80%;
 justify-content: space-between;
 
 `
+
+export const ContainerPerfil = styled(Container)`
+
+background-color: white;
+`

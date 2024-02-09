@@ -14,6 +14,7 @@ import { esqueceuSuaSenha } from './src/Screens/EsqueceuSenha/esqueceuSenha';
 import { verificarEmail } from './src/Screens/VerifiqueEmail/verificarSenha'
 import { redefinirSenha } from './src/Screens/RedefinirSenha/redefinirSenha'
 import { criarAConta } from './src/Screens/CriarConta/criarConta';
+import { Perfil } from './src/Screens/Perfil/perfil';
 
 
 export default function App() {
@@ -93,6 +94,14 @@ export default function App() {
             name="criarAConta"
             component={criarAConta}
             options={{title: "criarAConta"}}
+
+            />
+
+            <Stack.Screen
+
+            name="Perfil"
+            component={Perfil}
+            options={{title: "Perfil"}}
 
             />
 

@@ -1,3 +1,4 @@
+import { TextInput } from "react-native";
 import styled from "styled-components";
 
 export const Input = styled.TextInput.attrs({
@@ -37,4 +38,48 @@ border: 1px;
 border-color: white;
 
 `
+
+export const  InputBoxShadow = styled.SafeAreaView`
+
+margin-top: -52px;
+background-color: white;
+width: 70%;
+height: 110px;
+elevation: 15;
+border-radius: 5px;
+align-items: center;
+justify-content: center;
+
+
+`
+
+export const TextInputShadow = styled.Text`
+
+font-family: MontserratAlternates_600SemiBold;
+font-size: 16px;
+
+`
+
+export const TextInputShadowEmail = styled(TextInputShadow)`
+
+font-family: Quicksand_500Medium;
+
+`
+
+// export const InputPerfil = styled(Input).attrs({
+//     placeholderTextColor: "black"
+// })`
+
+// background-color: #F5F3F3;
+// border-color: #F5F3F3;
+// `
+
+// export const Label = styled.Text`
+
+// font-size: 20px;
+
+
+
+// `
+
 
