@@ -12,8 +12,18 @@ text-decoration: underline;
 
 `
 
+export const LinkMidiumPront = styled(LinkMidium)`
+color: black;
+`
+
 export const ContentAccount = styled.Text`
 margin-top: 35px;
+
+`
+export const ContentAccountProtuario = styled.Text`
+margin-bottom: 50px;
+margin-top: -15px;
+color: black;
 
 `
 export const TextAccount = styled.Text`

@@ -21,3 +21,8 @@ export const ContainerPerfil = styled(Container)`
 
 background-color: white;
 `
+export const ScroolForm = styled.ScrollView `
+
+height: 100%;
+
+`

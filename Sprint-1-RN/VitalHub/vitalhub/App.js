@@ -15,6 +15,8 @@ import { verificarEmail } from './src/Screens/VerifiqueEmail/verificarSenha'
 import { redefinirSenha } from './src/Screens/RedefinirSenha/redefinirSenha'
 import { criarAConta } from './src/Screens/CriarConta/criarConta';
 import { Perfil } from './src/Screens/Perfil/perfil';
+import { Prontuario } from './src/Screens/Prontuario/prontuario';
+import { Consulta } from './src/Screens/Consulta/consulta';
 
 
 export default function App() {
@@ -102,6 +104,20 @@ export default function App() {
             name="Perfil"
             component={Perfil}
             options={{title: "Perfil"}}
+
+            />
+            <Stack.Screen
+
+            name="Prontuario"
+            component={Prontuario}
+            options={{title: "Prontuario"}}
+
+            />
+            <Stack.Screen
+
+            name="Consulta"
+            component={Consulta}
+            options={{title: "Consulta"}}
 
             />
 

@@ -26,3 +26,19 @@ text-transform: uppercase;
 export const ButtonRecuperar = styled(Button)`
 margin-top: 25px;
 `
+
+export const ButtonPerfil = styled(Button)`
+
+gap: 30px;
+margin-top: 20px;
+`
+
+export const ButtonPerfilSair = styled(Button)`
+
+width: 371px;
+background-color: #ACABB7;
+border-color: #ACABB7;
+margin-top: 20px;
+margin-bottom: 40px;
+
+`

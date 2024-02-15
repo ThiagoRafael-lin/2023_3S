@@ -43,7 +43,7 @@ export const  InputBoxShadow = styled.SafeAreaView`
 
 margin-top: -52px;
 background-color: white;
-width: 70%;
+width: 80%;
 height: 110px;
 elevation: 15;
 border-radius: 5px;
