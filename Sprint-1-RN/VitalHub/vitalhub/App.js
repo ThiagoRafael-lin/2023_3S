@@ -16,8 +16,8 @@ import { redefinirSenha } from './src/Screens/RedefinirSenha/redefinirSenha'
 import { criarAConta } from './src/Screens/CriarConta/criarConta';
 import { Perfil } from './src/Screens/Perfil/perfil';
 import { Prontuario } from './src/Screens/Prontuario/prontuario';
-import { Consulta } from './src/Screens/Consulta/consulta';
-
+// import { Header } from './src/components/Header/header'
+import { Home } from './src/components/Home/home';
 
 export default function App() {
 
@@ -41,89 +41,89 @@ export default function App() {
 
 
 
-      //container - envolve toda a estrutura
-        //navigator - componente para a navegação 
-          //tela - tela
-            //name: nome da tela
-            //componente: componente que será chamado
-            //options(title): título da tela
+    //container - envolve toda a estrutura
+    //navigator - componente para a navegação 
+    //tela - tela
+    //name: nome da tela
+    //componente: componente que será chamado
+    //options(title): título da tela
 
-      <NavigationContainer>
-          <Stack.Navigator>
+    <NavigationContainer>
+      <Stack.Navigator>
 
-            <Stack.Screen
+        <Stack.Screen
 
-            name="navegacao"
-            component={Navegacao}
-            options={{title: "Navegação"}}
+          name="navegacao"
+          component={Navegacao}
+          options={{ title: "Navegação" }}
 
-            />
+        />
 
-            <Stack.Screen
+        <Stack.Screen
 
-            name="Login"
-            component={Login}
-            options={{title: "Login"}}
+          name="Login"
+          component={Login}
+          options={{ title: "Login" }}
 
-            />
+        />
 
-            <Stack.Screen
+        <Stack.Screen
 
-            name="esqueceuSuaSenha"
-            component={esqueceuSuaSenha}
-            options={{title: "EsqueceuSuaSenha"}}
+          name="esqueceuSuaSenha"
+          component={esqueceuSuaSenha}
+          options={{ title: "EsqueceuSuaSenha" }}
 
-            />
+        />
 
-            <Stack.Screen
+        <Stack.Screen
 
-            name="verificarEmail"
-            component={verificarEmail}
-            options={{title: "verificarEmail"}}
+          name="verificarEmail"
+          component={verificarEmail}
+          options={{ title: "verificarEmail" }}
 
-            />
+        />
 
-            <Stack.Screen
+        <Stack.Screen
 
-            name="redefinirSenha"
-            component={redefinirSenha}
-            options={{title: "redefinirSenha"}}
+          name="redefinirSenha"
+          component={redefinirSenha}
+          options={{ title: "redefinirSenha" }}
 
-            />
+        />
 
-            <Stack.Screen
+        <Stack.Screen
 
-            name="criarAConta"
-            component={criarAConta}
-            options={{title: "criarAConta"}}
+          name="criarAConta"
+          component={criarAConta}
+          options={{ title: "criarAConta" }}
 
-            />
+        />
 
-            <Stack.Screen
+        <Stack.Screen
 
-            name="Perfil"
-            component={Perfil}
-            options={{title: "Perfil"}}
+          name="Perfil"
+          component={Perfil}
+          options={{ title: "Perfil" }}
 
-            />
-            <Stack.Screen
+        />
+        <Stack.Screen
 
-            name="Prontuario"
-            component={Prontuario}
-            options={{title: "Prontuario"}}
+          name="Prontuario"
+          component={Prontuario}
+          options={{ title: "Prontuario" }}
 
-            />
-            <Stack.Screen
+        />
+        <Stack.Screen
 
-            name="Consulta"
-            component={Consulta}
-            options={{title: "Consulta"}}
+          name="Home"
+          component={Home}
+          options={{ title: "Home" }}
 
-            />
+        />
 
 
-          </Stack.Navigator>
-      </NavigationContainer>
+      </Stack.Navigator>
+    </NavigationContainer>
 
   );
 }

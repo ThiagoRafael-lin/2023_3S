@@ -53,6 +53,14 @@ justify-content: center;
 
 `
 
+export const InputConsulta = styled.SafeAreaView`
+
+width: 100%px;
+height: 144px;
+
+
+`
+
 export const TextInputShadow = styled.Text`
 
 font-family: MontserratAlternates_600SemiBold;
