@@ -1,16 +1,57 @@
-import { ContainerConsulta } from "../Containers/style"
+import { useState } from "react"
+import { BtnListAppointment } from '../../components/FilterAppointment/BtnListAppointment';
 import { CalendarHome } from "../CalendarHome/calendarHome"
-import { Header } from "../Header/header"
+import { ContainerConsulta } from "../Containers/style"
+import { Header } from "../../components/Header/header"
+import { FilterAppointment } from "./style";
 
 export const Home = () => {
 
-    return(
+    const [statusLista, setStatusLista] = useState("pendente");
+
+    return (
 
         <ContainerConsulta>
 
-        <Header/>
+            {/* Header */}
+            <Header />
 
-        <CalendarHome/>
+            {/* CalendarHome */}
+            <CalendarHome />
+
+
+
+            {/* Filtros (Botões) */}
+
+            {/* Container */}
+            <FilterAppointment>
+                <BtnListAppointment
+                    textButton={'Agendadas'}
+                    clickButton={statusLista === "Pendente"}
+                    onPress={() => setStatusLista("Pendente")}
+                />
+                <BtnListAppointment
+                    textButton={'Realizadas'}
+                    clickButton={statusLista === "Realizado"}
+                    onPress={() => setStatusLista("Realizado")}
+                />
+                <BtnListAppointment
+                    textButton={'Canceladas'}
+                    clickButton={statusLista === "Cancelado"}
+                    onPress={() => setStatusLista("Cancelado")}
+                />
+            </FilterAppointment>
+
+            {/* cards */}
+
+            <FlatList>
+{/* 
+                <Card />
+
+                <Card /> */}
+
+            </FlatList>
+
 
         </ContainerConsulta>
 

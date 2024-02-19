@@ -1,5 +1,5 @@
 import { LinearGradient } from "expo-linear-gradient";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Container = styled.SafeAreaView`
 
@@ -48,7 +48,15 @@ box-shadow: 0px 4px 15px #00000014;
 flex-direction: row;
 align-items: center;
 justify-content: space-between;
-`
-
-
-
+`;
+export const ButtonTextStyle = styled.Text`
+    font-size: 12px;
+    font-family: "MontserratAlternates_600SemiBold";
+    
+    ${props => props.clickButton ?
+        css`
+    color: #fbfbfb;`
+        : css`
+   color: #607ec5`}
+    
+`;
