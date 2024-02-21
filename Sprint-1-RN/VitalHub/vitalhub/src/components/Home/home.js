@@ -6,6 +6,8 @@ import { Header } from "../../components/Header/header"
 import { FilterAppointment } from "./style";
 import { ListComponent } from "../List/list";
 import { AppointmentCard } from "../AppointmentCard/AppointmentCard";
+import { CancellationModal } from "../CancellationModal/cancellationModal";
+import { MedicalRecordModal } from "../MedicalRecordModal/MedicalRecordModal";
 
 const Consultas = [
 
@@ -19,12 +21,18 @@ const Consultas = [
 
 export const Home = () => {
 
+    // state para o estado da lista(cards)
     const [statusLista, setStatusLista] = useState("pendente");
+
+    // state para a exibição dos modais
+    const [showModalCancel, setShowModalCancel] = useState (false); 
+    const [showModalAppointment, setShowModalAppointment] = useState (false); 
+
 
     return (
 
         <ContainerConsulta>
-
+            
             {/* Header */}
             <Header />
 
@@ -39,27 +47,24 @@ export const Home = () => {
             <FilterAppointment>
                 <BtnListAppointment
                     textButton={'Agendadas'}
-                    clickButton={statusLista === "Pendente"}
-                    onPress={() => setStatusLista("Pendente")}
+                    clickButton={statusLista === "pendente"}
+                    onPress={() => setStatusLista("pendente")}
                 />
                 <BtnListAppointment
                     textButton={'Realizadas'}
-                    clickButton={statusLista === "Realizado"}
-                    onPress={() => setStatusLista("Realizado")}
+                    clickButton={statusLista === "realizado"}
+                    onPress={() => setStatusLista("realizado")}
                 />
                 <BtnListAppointment
                     textButton={'Canceladas'}
-                    clickButton={statusLista === "Cancelado"}
-                    onPress={() => setStatusLista("Cancelado")}
+                    clickButton={statusLista === "cancelado"}
+                    onPress={() => setStatusLista("cancelado")}
                 />
             </FilterAppointment>
 
             {/* cards */}
+
             {/* <AppointmentCard /> */}
-
-
-
-            {/* arrumar o card que não aparece */}
             <ListComponent
                 data={Consultas}
                 keyExtractor={(item) => item.id}
@@ -69,14 +74,28 @@ export const Home = () => {
 
                         <AppointmentCard
                             situacao={item.situacao}
+                            onPressCancel={() => setShowModalCancel(true)}
+                            onPressAppointment={() => setShowModalAppointment(true)}
 
                         />
-
                     )
                 }
+                // showsVerticalScrollIndicator={false}
             />
 
-        </ContainerConsulta>
+            {/* modal Cancelar */}
+            <CancellationModal
+            visible={showModalCancel}
+            setShowModalCancel={setShowModalCancel}
+            />
 
-    )
-}
+
+            {/* Modal ver Prontuario */}
+
+            <MedicalRecordModal
+            visible={showModalAppointment}
+            setShowModalAppointment={setShowModalAppointment}
+            />
+        </ContainerConsulta>
+    );
+};

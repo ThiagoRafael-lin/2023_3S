@@ -43,21 +43,14 @@ margin-bottom: 40px;
 
 `
 
-// export const BotoesConsulta = styled.TouchableOpacity`
+export const ButtonModal = styled(Button)`
+width: 80%;
+margin-top: 15px;
 
-// height: 10%;
-// gap: 30px;
-// display: flex;
-// justify-content: row;
+`
 
-// `
-
-// export const BotaoAgenda = styled(Button)`
-
-// `
-// export const BotaoRealizados = styled(Button)`
-
-// `
-// export const BotaoCancelar = styled(Button)`
-
-// `
+export const ButtonSecondary = styled(Button)`
+background-color: transparent;
+border: none;
+margin-bottom: 10px;
+`

@@ -3,7 +3,10 @@ import styled from "styled-components";
 
 export const ListComponent = styled(FlatList)`
 width: 100%;
-background-color: yellow;
+padding-top: 10px;
+margin: 10px;
+background-color: #fbfbfb;
+
 
 /* height: 50%; */
 /* margin: ; */

@@ -32,6 +32,15 @@ height: 100%;
 
 `
 
+export const RecordModalInfo = styled.View`
+flex-direction: row;
+gap: 20px;
+justify-content: center;
+width: 80%;
+height: 30px;
+
+`
+
 export const ContainerHeader = styled(LinearGradient).attrs({
     colors: ["#60bfc5", "#496BBA"],
     start: {x: -0.05, y: 1.08},
@@ -60,3 +69,6 @@ export const ButtonTextStyle = styled.Text`
    color: #607ec5`}
     
 `;
+
+
+
