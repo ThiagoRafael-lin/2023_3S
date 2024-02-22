@@ -41,6 +41,20 @@ height: 30px;
 
 `
 
+export const MedicalInstrument = styled.View`
+position: absolute;
+left: 80%;
+top: 145%;
+
+`
+
+export const ScheduleNivelConsulta = styled.View`
+
+width: 70%;
+height: 40px;
+
+`
+
 export const ContainerHeader = styled(LinearGradient).attrs({
     colors: ["#60bfc5", "#496BBA"],
     start: {x: -0.05, y: 1.08},

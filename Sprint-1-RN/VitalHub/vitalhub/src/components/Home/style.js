@@ -12,7 +12,9 @@ left: 12px;
 
 
 `
-export const FlatList = styled.View`
 
+export const PressureGaugeContent = styled.View`
 
+width: 60px;
+height: 60px;
 `

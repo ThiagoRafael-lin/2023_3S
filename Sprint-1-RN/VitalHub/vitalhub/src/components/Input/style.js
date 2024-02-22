@@ -74,20 +74,16 @@ font-family: Quicksand_500Medium;
 
 `
 
-// export const InputPerfil = styled(Input).attrs({
-//     placeholderTextColor: "black"
-// })`
+export const InputNivel = styled.SafeAreaView`
 
-// background-color: #F5F3F3;
-// border-color: #F5F3F3;
-// `
+width: 88px;
+height: 80px;
 
-// export const Label = styled.Text`
+`
 
-// font-size: 20px;
+export const ScheduleInput = styled.SafeAreaView`
+width: 80%;
+height: 40px;
 
-
-
-// `
-
+`
 

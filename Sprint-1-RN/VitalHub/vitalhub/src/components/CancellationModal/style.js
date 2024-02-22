@@ -18,7 +18,7 @@ align-items: center;
 `
 
 export const ModalText = styled.Text`
-width: 40%;
+width: 90%;
 font-size: 16px;
 color: #5f5c6b;
 line-height: 22px;

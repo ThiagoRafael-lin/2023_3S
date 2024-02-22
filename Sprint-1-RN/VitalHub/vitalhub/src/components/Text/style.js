@@ -27,5 +27,19 @@ width: 100%;
 export const TextCriar = styled(Text)`
 
 margin-bottom: 15px;
+
+`
+
+export const ScheduleLabelText = styled.Text`
+font-size: 10px;
+font-family: Quicksand_600SemiBold;
+
+`
+
+export const ScheduleLabel = styled.Text`
+font-size: 10px;
+font-family: Quicksand_600SemiBold;
+
+
 `
 

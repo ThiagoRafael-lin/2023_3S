@@ -14,14 +14,14 @@ export const AppointmentCard = ({
         <ContainerCardList>
 
             <ProfileImage
-                source={require('../../../assets/imagePaciente.png')}
+                source={require('../../../assets/ImagemPerfilMedicoPequeno.png')}
             />
 
             <ContentCard>
 
                 <DataProfileCard>
 
-                    <ProfileName>Niccole Sarga</ProfileName>
+                    <ProfileName>Dr. Claudio</ProfileName>
 
                     <ProfileData>
                         <TextAge>22 anos</TextAge>
@@ -34,7 +34,7 @@ export const AppointmentCard = ({
 
                     <ClockCard situacao={situacao}>
                         <AntDesign name="clockcircle" size={14} color={situacao == "pendente" ? "#49B3BA" : "#8C8A97"} />
-                        <TextBold situacao={situacao} color={"#49B3BA"}>14:00</TextBold>
+                        <TextBold situacao={situacao}>14:00</TextBold>
                     </ClockCard>
 
                     {/* valida e mostra o tipo de botão conforme a situação da consulta */}

@@ -61,7 +61,7 @@ font-family: Quicksand_500Medium;
 export const TextBold = styled.Text`
 font-family: Quicksand_600SemiBold;
 font-size: 14px;
-color: ${(props) => props.situacao == "pendente" ? "#49B3BA" : "#8C8A97"};
+color: ${(props) => props.situacao == "pendente" ? "#49B3BA" : "#4E4B59"};
 
 
 `

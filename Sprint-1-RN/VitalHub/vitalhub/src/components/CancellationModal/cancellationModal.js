@@ -27,7 +27,7 @@ export const CancellationModal = ({
 
                         {/* Button */}
                         <ButtonModal>
-                            <ButtonTitle>Confirmar </ButtonTitle>
+                            <ButtonTitle>Confirmar</ButtonTitle>
                         </ButtonModal>
 
                         <ButtonSecondary onPress={() => setShowModalCancel(false)}>

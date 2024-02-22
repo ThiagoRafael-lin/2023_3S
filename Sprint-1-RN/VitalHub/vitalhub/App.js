@@ -18,6 +18,7 @@ import { Perfil } from './src/Screens/Perfil/perfil';
 import { Prontuario } from './src/Screens/Prontuario/prontuario';
 // import { Header } from './src/components/Header/header'
 import { Home } from './src/components/Home/home';
+import { HomePaciente } from './src/components/HomePaciente/homePaciente'
 
 export default function App() {
 
@@ -120,7 +121,13 @@ export default function App() {
           options={{ title: "Home" }}
 
         />
+        <Stack.Screen
 
+          name="HomePaciente"
+          component={HomePaciente}
+          options={{ title: "HomePaciente" }}
+
+        />
 
       </Stack.Navigator>
     </NavigationContainer>

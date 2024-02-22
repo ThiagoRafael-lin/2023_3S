@@ -7,8 +7,6 @@ import { RecordModalInfo } from "../Containers/style"
 
 export const MedicalRecordModal = ({
     visible,
-    setShowModalCancel,
-    onPressAppointment,
     setShowModalAppointment,
     ...rest
 }) => {

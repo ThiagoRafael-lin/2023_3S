@@ -53,4 +53,18 @@ export const ButtonSecondary = styled(Button)`
 background-color: transparent;
 border: none;
 margin-bottom: 10px;
+
+`
+
+export const Stethoscope = styled.TouchableOpacity`
+
+background-color: #49B3BA;
+width: 60px;
+height: 60px;
+background-color: #49B3BA;
+border-radius: 10px;
+align-items: center;
+justify-content: center;
+
+
 `
