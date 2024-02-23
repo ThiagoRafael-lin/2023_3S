@@ -2,18 +2,22 @@ import styled from "styled-components";
 
 export const ScheduleModal = styled.View`
 flex: 1;
-align-content: center;
-justify-content: center;
+align-items: center;
+justify-content: flex-end;
 background-color: rgba(0, 0, 0, 0.60);
+
 
 `
 
 export const ScheduleContent = styled.View`
 padding: 30px 30px 10px;
-width: 90%;
-border-radius: 10px;
+width: 100%;
+height: 83.2%;
+border-radius: 10px 10px 0px 0px;
 background-color: #fff;
-align-content: center;
+align-items: center;
+justify-content: center;
+gap: 40px;
 
 
 `

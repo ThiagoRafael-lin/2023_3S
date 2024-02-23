@@ -45,7 +45,8 @@ margin-bottom: 40px;
 
 export const ButtonModal = styled(Button)`
 width: 80%;
-margin-top: 15px;
+margin-top: 125px;
+margin-bottom: -40px;
 
 `
 

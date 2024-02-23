@@ -29,6 +29,7 @@ font-family: MontserratAlternates_600SemiBold;
 export const TitleScheduleModal = styled.Text`
 font-size: 20px;
 font-family: MontserratAlternates_600SemiBold;
+margin-bottom: -30px;
 
 `
 

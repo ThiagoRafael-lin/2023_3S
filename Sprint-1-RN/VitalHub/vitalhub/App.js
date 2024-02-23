@@ -13,12 +13,13 @@ import { Login } from './src/Screens/Login/login';
 import { esqueceuSuaSenha } from './src/Screens/EsqueceuSenha/esqueceuSenha';
 import { verificarEmail } from './src/Screens/VerifiqueEmail/verificarSenha'
 import { redefinirSenha } from './src/Screens/RedefinirSenha/redefinirSenha'
-import { criarAConta } from './src/Screens/CriarConta/criarConta';
+import { CriarAConta } from './src/Screens/CriarConta/criarConta';
 import { Perfil } from './src/Screens/Perfil/perfil';
 import { Prontuario } from './src/Screens/Prontuario/prontuario';
 // import { Header } from './src/components/Header/header'
-import { Home } from './src/components/Home/home';
-import { HomePaciente } from './src/components/HomePaciente/homePaciente'
+import { Home } from './src/Screens/Home/home';
+import { HomePaciente } from './src/Screens/HomePaciente/HomePaciente';
+import { SelecionarClinica } from './src/Screens/SelecionarClinica/selecionarClinica';
 
 export default function App() {
 
@@ -94,9 +95,9 @@ export default function App() {
 
         <Stack.Screen
 
-          name="criarAConta"
-          component={criarAConta}
-          options={{ title: "criarAConta" }}
+          name="CriarAConta"
+          component={CriarAConta}
+          options={{ title: "CriarAConta" }}
 
         />
 
@@ -128,6 +129,14 @@ export default function App() {
           options={{ title: "HomePaciente" }}
 
         />
+        <Stack.Screen
+
+          name="SelecionarClinica"
+          component={SelecionarClinica}
+          options={{ title: "SelecionarClinica" }}
+
+        />
+        
 
       </Stack.Navigator>
     </NavigationContainer>

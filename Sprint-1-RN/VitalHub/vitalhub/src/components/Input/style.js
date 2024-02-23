@@ -74,16 +74,30 @@ font-family: Quicksand_500Medium;
 
 `
 
-export const InputNivel = styled.SafeAreaView`
+export const InputNivel = styled.TouchableOpacity`
 
+flex: 1;
+flex-direction: row;
 width: 88px;
-height: 80px;
+height: 50px;
+border: 2px solid #60BFC5;
+border-radius: 5px;
+align-items: center;
+justify-content: center;
 
 `
 
-export const ScheduleInput = styled.SafeAreaView`
-width: 80%;
-height: 40px;
+export const ScheduleInput = styled.TextInput`
+margin-top: 50px;
+border: 2px solid #60BFC5;
+border-radius: 5px;
+align-items: start;
+justify-content: center;
+width: 112%;
+height: 63px;
+right: 18px;
+padding: 10px;
+font-family: MontserratAlternates_600SemiBold;
 
 `
 

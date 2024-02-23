@@ -3,7 +3,7 @@ import { ButtonModal, ButtonSecondary, ButtonTitle } from "../Button/style";
 import { LinkMidiumModal } from "../CancellationModal/style";
 import { ScheduleContent, ScheduleLocalizacao, ScheduleModal } from "./style";
 import { TitleScheduleModal } from "../Title/style";
-import { ScheduleLabel, ScheduleLabelText } from "../Text/style";
+import { InputNivelText, ScheduleInputText, ScheduleLabel, ScheduleLabelText } from "../Text/style";
 import { ScheduleNivelConsulta } from "../Containers/style";
 import { InputNivel, ScheduleInput } from "../Input/style";
 
@@ -31,29 +31,36 @@ export const ScheduleAppointment = ({
 
                     <ScheduleNivelConsulta>
 
-                        <InputNivel
-                            placeholder='Rotina'
-                        />
-                        <InputNivel
-                            placeholder='Exame'
-                        />
-                        <InputNivel
-                            placeholder='Urgência'
-                        />
+                        <InputNivel>
+                            <InputNivelText>Rotina</InputNivelText>
+                        </InputNivel>
+
+                        <InputNivel>
+                            <InputNivelText>Exame</InputNivelText>
+                        </InputNivel>
+
+                        <InputNivel>
+                            <InputNivelText>Urgência</InputNivelText>
+                        </InputNivel>
+
+                       
 
                     </ScheduleNivelConsulta>
 
                     <ScheduleLocalizacao>
 
                         <ScheduleLabel>Informe a localização desejada</ScheduleLabel>
+
                         <ScheduleInput
-                            placeholder='Informe a localização'
+                        placeholder="Informe a Localização"
+                        placeholderTextColor="#34898F"
                         />
+                            {/* <ScheduleInputText>Informe a localização</ScheduleInputText> */}
 
                     </ScheduleLocalizacao>
 
                     <ButtonModal>
-                        <ButtonTitle>Confirmar</ButtonTitle>
+                        <ButtonTitle>Continuar</ButtonTitle>
                     </ButtonModal>
 
                     <ButtonSecondary onPress={() => setShowModalSchedule(false)}>

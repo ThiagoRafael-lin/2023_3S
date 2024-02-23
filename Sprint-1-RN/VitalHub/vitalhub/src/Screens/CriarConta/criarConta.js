@@ -6,7 +6,7 @@ import { Logo } from "../../components/Logo/style"
 import { Title } from "../../components/Title/style"
 import { TextCriar } from "../../components/Text/style"
 
-export const criarAConta = ({navigation}) => {
+export const CriarAConta = ({navigation}) => {
     return (
 
         <Container>

@@ -1,18 +1,13 @@
 import { useState } from "react"
-import { BtnListAppointment } from '../FilterAppointment/BtnListAppointment';
-import { CalendarHome } from "../CalendarHome/calendarHome"
-import { ContainerConsulta, MedicalInstrument } from "../Containers/style"
-import { Header } from "../Header/header"
-// import { FilterAppointment } from "./style";
-import { FilterAppointment } from "../Home/style";
-import { ListComponent } from "../List/list";
-import { AppointmentCard } from "../AppointmentCard/AppointmentCard";
-import { CancellationModal } from "../CancellationModal/cancellationModal";
-import { MedicalRecordModal } from "../MedicalRecordModal/MedicalRecordModal";
-import { HeaderPaciente } from "../HeaderPaciente/headerPaciente";
-import { FontAwesome6 } from '@expo/vector-icons';
-import { Stethoscope } from "../Button/style";
-import { ScheduleAppointment } from "../ScheduleAppointment/ScheduleAppointment";
+import { BtnListAppointment } from '../../components/FilterAppointment/BtnListAppointment';
+import { CalendarHome } from "../../components/CalendarHome/calendarHome";
+import { ContainerConsulta } from "../../components/Containers/style";
+import { Header } from "../../components/Header/header"
+import { ListComponent } from "../../components/List/list";
+import { AppointmentCard } from "../../components/AppointmentCard/AppointmentCard";
+import { CancellationModal } from "../../components/CancellationModal/cancellationModal";
+import { MedicalRecordModal } from "../../components/MedicalRecordModal/MedicalRecordModal";
+import { FilterAppointment } from "./style";
 
 const Consultas = [
 
@@ -24,7 +19,7 @@ const Consultas = [
 
 ];
 
-export const HomePaciente = () => {
+export const Home = () => {
 
     // state para o estado da lista(cards)
     const [statusLista, setStatusLista] = useState("pendente");
@@ -32,14 +27,14 @@ export const HomePaciente = () => {
     // state para a exibição dos modais
     const [showModalCancel, setShowModalCancel] = useState(false);
     const [showModalAppointment, setShowModalAppointment] = useState(false);
-    const [showModalSchedule, setShowModalSchedule] = useState(false);
+
 
     return (
 
         <ContainerConsulta>
 
             {/* Header */}
-            <HeaderPaciente />
+            <Header />
 
             {/* CalendarHome */}
             <CalendarHome />
@@ -67,9 +62,6 @@ export const HomePaciente = () => {
 
             {/* cards */}
 
-            {/* <AppointmentCard /> */}
-
-
             <ListComponent
                 data={Consultas}
                 keyExtractor={(item) => item.id}
@@ -94,26 +86,14 @@ export const HomePaciente = () => {
                 setShowModalCancel={setShowModalCancel}
             />
 
-            {/* Modal ver Prontuario do medico */}
 
+            {/* Modal ver Prontuario */}
             <MedicalRecordModal
                 visible={showModalAppointment}
                 setShowModalAppointment={setShowModalAppointment}
             />
 
-            {/* Modal para agendar consulta */}
-
-            <ScheduleAppointment
-                visible={showModalSchedule}
-                setShowModalSchedule={setShowModalSchedule}
-            />
-
-
-            <MedicalInstrument>
-                <Stethoscope onPress={() => setShowModalSchedule(true)}>
-                    <FontAwesome6 name="stethoscope" size={24} color="white" />
-                </Stethoscope>
-            </MedicalInstrument>
+            {/* Container */}
 
 
         </ContainerConsulta>

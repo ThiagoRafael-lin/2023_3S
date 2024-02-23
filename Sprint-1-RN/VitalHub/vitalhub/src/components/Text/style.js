@@ -31,14 +31,37 @@ margin-bottom: 15px;
 `
 
 export const ScheduleLabelText = styled.Text`
-font-size: 10px;
+font-size: 14px;
+font-weight: 600;
 font-family: Quicksand_600SemiBold;
+top: 15px;
+right: 66px; 
 
 `
 
 export const ScheduleLabel = styled.Text`
 font-size: 10px;
 font-family: Quicksand_600SemiBold;
+font-size: 14px;
+top: 40px;
+right: 13px;
+
+`
+
+export const ScheduleInputText = styled.Text`
+font-size: 10px;
+font-family: MontserratAlternates_600SemiBold;
+font-size: 14px;
+color: #34898F;
+left: 10px;
+`
+
+export const InputNivelText = styled.Text`
+font-size: 14px;
+font-weight: 600;
+font-family: MontserratAlternates_600SemiBold;
+color: #34898F;
+
 
 
 `

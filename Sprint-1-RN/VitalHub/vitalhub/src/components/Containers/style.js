@@ -50,8 +50,13 @@ top: 145%;
 
 export const ScheduleNivelConsulta = styled.View`
 
-width: 70%;
+width: 90%;
 height: 40px;
+flex: 1;
+flex-direction: row;
+gap: 10px;
+margin-top: -15px;
+
 
 `
 
