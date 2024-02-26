@@ -33,4 +33,13 @@ margin-bottom: -30px;
 
 `
 
+export const TitleClinica = styled(Title)`
+color: #000;
+
+`
+export const TitleMedico = styled(TitleClinica)`
+color: #000;
+
+`
+
 

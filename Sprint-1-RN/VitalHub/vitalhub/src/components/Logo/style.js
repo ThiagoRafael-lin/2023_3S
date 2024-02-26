@@ -15,3 +15,9 @@ height: 32px;
 color: black;
 
 `
+
+export const ImagePerfilMedico = styled.Image`
+width: 77px;
+height: 80px;
+
+`

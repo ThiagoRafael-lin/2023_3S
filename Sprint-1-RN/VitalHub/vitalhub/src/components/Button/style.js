@@ -57,6 +57,10 @@ margin-bottom: 10px;
 
 `
 
+export const ButtonSecondaryClinica = styled(ButtonSecondary)`
+margin-top: 30px;
+`
+
 export const Stethoscope = styled.TouchableOpacity`
 
 background-color: #49B3BA;

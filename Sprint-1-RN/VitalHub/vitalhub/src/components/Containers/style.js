@@ -60,6 +60,89 @@ margin-top: -15px;
 
 `
 
+export const ClinicaCardContainer = styled.View`
+width: 100%;
+gap: 20px;
+align-items: center;
+background-color: #fff;
+
+`
+
+
+
+export const NameLocalization = styled.View`
+width: 350px;
+height: 94px;
+/* right: 80px; */
+flex-direction: row;
+justify-content: space-evenly;
+border: 2px solid #496BBA;
+border-radius: 5px;
+
+`
+
+export const StarsContainer = styled.View`
+width: 100px;
+height: 80%;
+/* justify-content: center; */
+flex-direction: column; 
+/* align-items: center;  */
+
+`
+
+export const Profile = styled.View`
+width: 80%;
+height: 80%;
+justify-content: center;
+left: 30px;
+
+`
+
+export const Day = styled.View`
+width: 90%;
+right: 20px;
+padding: 5px;
+flex-direction: row;
+background-color: #E8FCFD;
+
+`
+
+export const Star = styled.View`
+flex-direction: row;
+
+`
+
+export const CalendarContainer = styled.View`
+margin-top: 20px;
+gap: 10px;
+align-items: center;
+justify-content: center;
+
+`
+
+export const MedicalContainer = styled.View`
+width: 100%;
+align-items: center;
+gap: 40px;
+
+
+`
+
+export const SelecionarMedicoContainer = styled.View`
+width: 70%;
+flex-direction: row;
+align-items: center;
+gap: 10px;
+
+`
+
+export const NomeEspecialidade = styled.View`
+gap: 10px;
+width: 80%;
+flex-direction: column;
+
+`
+
 export const ContainerHeader = styled(LinearGradient).attrs({
     colors: ["#60bfc5", "#496BBA"],
     start: {x: -0.05, y: 1.08},
@@ -88,6 +171,7 @@ export const ButtonTextStyle = styled.Text`
    color: #607ec5`}
     
 `;
+
 
 
 

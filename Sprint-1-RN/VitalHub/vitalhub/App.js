@@ -20,6 +20,7 @@ import { Prontuario } from './src/Screens/Prontuario/prontuario';
 import { Home } from './src/Screens/Home/home';
 import { HomePaciente } from './src/Screens/HomePaciente/HomePaciente';
 import { SelecionarClinica } from './src/Screens/SelecionarClinica/selecionarClinica';
+import { SelecionarMedico } from './src/Screens/SelecionarMedico/SelecionarMedico';
 
 export default function App() {
 
@@ -134,6 +135,13 @@ export default function App() {
           name="SelecionarClinica"
           component={SelecionarClinica}
           options={{ title: "SelecionarClinica" }}
+
+        />
+        <Stack.Screen
+
+          name="SelecionarMedico"
+          component={SelecionarMedico}
+          options={{ title: "SelecionarMedico" }}
 
         />
         

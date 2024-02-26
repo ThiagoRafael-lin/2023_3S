@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { TextBold } from "../AppointmentCard/style";
 
 export const Text = styled.Text`
 
@@ -62,7 +63,44 @@ font-weight: 600;
 font-family: MontserratAlternates_600SemiBold;
 color: #34898F;
 
+`
 
+export const ProfileNameClinica = styled.Text`
+font-size: 16px;
+font-family: MontserratAlternates_600SemiBold;
 
 `
 
+export const ProfileLocalization = styled.Text`
+font-size: 14px;
+font-family: Quicksand_600SemiBold;
+top: 10px;
+
+`
+
+export const NumberStar = styled.Text`
+bottom: 1px;
+font-size: 14px;
+font-family: Quicksand_600SemiBold;
+color: #F9A620;
+
+`
+
+export const TextDay = styled(TextBold)`
+width:112%;
+font-family: Quicksand_600SemiBold;
+color: #49B3BA;
+
+`
+
+export const NomeMedico = styled.Text`
+font-size: 16px;
+font-family: MontserratAlternates_600SemiBold;
+
+`
+
+export const Especialidade = styled.Text`
+color: #8C8A97;
+font-size: 14px;
+font-family: Quicksand_600SemiBold;
+`
