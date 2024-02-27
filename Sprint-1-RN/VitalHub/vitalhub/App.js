@@ -21,6 +21,7 @@ import { Home } from './src/Screens/Home/home';
 import { HomePaciente } from './src/Screens/HomePaciente/HomePaciente';
 import { SelecionarClinica } from './src/Screens/SelecionarClinica/selecionarClinica';
 import { SelecionarMedico } from './src/Screens/SelecionarMedico/SelecionarMedico';
+import { SelecionarData } from './src/Screens/SelecionarData/SelecionarData';
 
 export default function App() {
 
@@ -142,6 +143,13 @@ export default function App() {
           name="SelecionarMedico"
           component={SelecionarMedico}
           options={{ title: "SelecionarMedico" }}
+
+        />
+        <Stack.Screen
+
+          name="SelecionarData"
+          component={SelecionarData}
+          options={{ title: "SelecionarData" }}
 
         />
         

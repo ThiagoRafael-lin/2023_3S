@@ -103,4 +103,14 @@ export const Especialidade = styled.Text`
 color: #8C8A97;
 font-size: 14px;
 font-family: Quicksand_600SemiBold;
+
+`
+
+export const LabelHorarioDisponivel = styled.Text`
+right: 65px;
+top: 25px;
+font-size: 14px;
+font-weight: 600;
+font-family: Quicksand_600SemiBold;
+
 `

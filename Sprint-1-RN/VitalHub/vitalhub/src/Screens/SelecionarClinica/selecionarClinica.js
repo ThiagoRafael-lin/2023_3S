@@ -13,16 +13,20 @@ export const SelecionarClinica = () => {
             <TitleClinica>Selecionar clínica</TitleClinica>
 
             <CardClinica
-
+                name={"Clínica Natureh"}
+                localidade={"São Paulo, SP"}
             />
             <CardClinica
-
+                name={"Diamond Pró-Mulher"}
+                localidade={"São Paulo, SP"}
             />
             <CardClinica
-
+                name={"Clinica Villa Lobos"}
+                localidade={"Taboão, SP"}
             />
             <CardClinica
-
+                name={"SP Oncologia Clínica"}
+                localidade={"Taboão, SP"}
             />
 
             <ButtonModal>

@@ -42,4 +42,9 @@ color: #000;
 
 `
 
+export const TitleAgendar = styled(TitleMedico)`
+margin-bottom: 40px;
+
+`
+
 

@@ -1,30 +1,38 @@
-import { NomeEspecialidade, SelecionarMedicoContainer } from '../Containers/style'
+import { ButtonModal, ButtonSecondaryClinica, ButtonTitle } from '../Button/style'
+import { LinkMidiumModal } from '../CancellationModal/style'
+import { MedicoContainerButton, NomeEspecialidade, SelecionarMedicoContainer } from '../Containers/style'
 import { ImagePerfilMedico } from '../Logo/style'
 import { Especialidade, NomeMedico } from '../Text/style'
 
-export const CardMedical = () => {
+export const CardMedical = ({
+    name,
+    profissao,
+    source,
+
+
+}) => {
     return (
 
         // Container
         <SelecionarMedicoContainer>
 
-                {/* imagem do perfil */}
+            {/* imagem do perfil */}
             <ImagePerfilMedico
-                source={require('../../../assets/medicoImagePerfil.png')}
+                source={source}
             />
 
-                {/* container do nome e especialidade  */}
+            {/* container do nome e especialidade  */}
             <NomeEspecialidade>
 
-                    {/* nome do medico */}
-                <NomeMedico>Dra Alessandra</NomeMedico>
+                {/* nome do medico */}
+                <NomeMedico>{name}</NomeMedico>
 
                 {/* especialidade do medico */}
-                <Especialidade>Demartologa, Esteticista</Especialidade>
+                <Especialidade>{profissao}</Especialidade>
 
             </NomeEspecialidade>
 
-
+           
         </SelecionarMedicoContainer>
 
     )

@@ -6,21 +6,25 @@ import { ClinicaContentCard } from "./style";
 import { NumberStar, ProfileLocalization, ProfileNameClinica, TextDay } from "../../components/Text/style";
 import { ClockCard, TextBold } from "../AppointmentCard/style";
 
-export const CardClinica = () => {
+export const CardClinica = ({
+    name,
+    localidade,
+}) => {
     return (
 
         // Containers
         // <CardContainer>
         <ClinicaCardContainer>
 
+
             {/* conteudo */}
-            {/* <ClinicaContentCard> */}
+            <ClinicaContentCard>
 
             <NameLocalization>
 
                 <Profile>
-                    <ProfileNameClinica>Clínica Natureh</ProfileNameClinica>
-                    <ProfileLocalization>São Paulo, SP</ProfileLocalization>
+                    <ProfileNameClinica>{name}</ProfileNameClinica>
+                    <ProfileLocalization>{localidade}</ProfileLocalization>
                 </Profile>
 
                 <StarsContainer>
@@ -51,7 +55,7 @@ export const CardClinica = () => {
 
 
 
-            {/* </ClinicaContentCard> */}
+            </ClinicaContentCard>
 
 
 

@@ -101,3 +101,11 @@ font-family: MontserratAlternates_600SemiBold;
 
 `
 
+export const InputSelecionarData = styled(Input).attrs({
+    placeholderTextColor: "#34898F"
+})`
+/* border-color: #49B3BA; */
+border: 2px solid #49B3BA;
+
+`
+

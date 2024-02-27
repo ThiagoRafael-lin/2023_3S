@@ -65,7 +65,6 @@ width: 100%;
 gap: 20px;
 align-items: center;
 background-color: #fff;
-
 `
 
 
@@ -76,7 +75,7 @@ height: 94px;
 /* right: 80px; */
 flex-direction: row;
 justify-content: space-evenly;
-border: 2px solid #496BBA;
+border: 2px solid #fff;
 border-radius: 5px;
 
 `
@@ -121,18 +120,23 @@ justify-content: center;
 `
 
 export const MedicalContainer = styled.View`
-width: 100%;
+/* width: 100%; */
 align-items: center;
-gap: 40px;
+gap: 20px;
+margin-top: 50px;
 
 
 `
 
-export const SelecionarMedicoContainer = styled.View`
-width: 70%;
+export const  SelecionarMedicoContainer = styled.View`
+width: 320px;
 flex-direction: row;
 align-items: center;
 gap: 10px;
+border: 2px solid white;
+background-color: #fff;
+padding: 5px;
+border-radius: 5px;
 
 `
 
@@ -140,6 +144,29 @@ export const NomeEspecialidade = styled.View`
 gap: 10px;
 width: 80%;
 flex-direction: column;
+
+`
+
+export const MedicalContent = styled.View`
+
+gap: 15px;
+`
+
+export const MedicoContainerButton = styled.View`
+flex-direction: column;
+right: 50px;
+
+`
+
+export const AgendarConsultaContainer = styled.View`
+width: 100%;
+align-items: center;
+
+`
+
+export const DownArrow = styled.View`
+left: 160px;
+bottom: 44px;
 
 `
 
