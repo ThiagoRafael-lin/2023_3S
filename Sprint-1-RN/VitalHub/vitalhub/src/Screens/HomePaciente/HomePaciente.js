@@ -32,6 +32,7 @@ export const HomePaciente = () => {
     const [showModalCancel, setShowModalCancel] = useState(false);
     const [showModalAppointment, setShowModalAppointment] = useState(false);
     const [showModalSchedule, setShowModalSchedule] = useState(false);
+    const [showMedicalRecordModal, setMedicalRecordModal] = useState(false);
 
     return (
 
@@ -80,6 +81,7 @@ export const HomePaciente = () => {
                             situacao={item.situacao}
                             onPressCancel={() => setShowModalCancel(true)}
                             onPressAppointment={() => setShowModalAppointment(true)}
+                            onPress={() => setMedicalRecordModal(true)}
 
                         />
                     )
@@ -105,6 +107,13 @@ export const HomePaciente = () => {
             <ScheduleAppointment
                 visible={showModalSchedule}
                 setShowModalSchedule={setShowModalSchedule}
+            />
+
+                {/* Modal para ver o prontuario paciente */}
+            <MedicalRecordModal
+                visible={showMedicalRecordModal}
+                setMedicalRecordModal={() => setMedicalRecordModal}
+
             />
 
 

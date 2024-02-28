@@ -1,14 +1,19 @@
-import { ButtonModal, ButtonSecondaryClinica, ButtonTitle } from "../../components/Button/style"
+import { ButtonModal, ButtonModalSelecionarData, ButtonSecondaryClinica, ButtonTitle } from "../../components/Button/style"
 import CalendarComponent from "../../components/CalendarComponent/CalendarComponent"
 import { LinkMidiumModal } from "../../components/CancellationModal/style"
 import { AgendarConsultaContainer, DownArrow } from "../../components/Containers/style"
-import Dropdown from "../../components/Dropdown/Dropdown"
 import { Input, InputSelecionarData } from "../../components/Input/style"
 import { LabelHorarioDisponivel } from "../../components/Text/style"
 import { TitleAgendar } from "../../components/Title/style"
 import { FontAwesome6 } from '@expo/vector-icons';
+import InputSelect from "../../components/InputSelect/InputSelect"
+import { useState } from "react"
+import { AgendarConsulta } from "../../components/AgendarConsulta/AgendarConsulta"
 
 export const SelecionarData = () => {
+
+    const [showModalAgendarConsulta, setShowModalAgendarConsulta] = useState(false);
+
     return (
 
         <AgendarConsultaContainer>
@@ -19,20 +24,18 @@ export const SelecionarData = () => {
 
             <LabelHorarioDisponivel>Selecione um horário disponível</LabelHorarioDisponivel>
 
-            <Dropdown />
+            <InputSelect />
 
-            {/* <InputSelecionarData
 
-                placeholder='Selecionar horário'
-
+            {/* modal de ver consulta agendada */}
+            <AgendarConsulta
+                visible={showModalAgendarConsulta}
+                setShowModalAgendarConsulta={setShowModalAgendarConsulta}
             />
-            <DownArrow>
-                <FontAwesome6 name="sort-down" size={24} color="#34898F" />
-            </DownArrow> */}
 
-            <ButtonModal>
+            <ButtonModalSelecionarData onPress={() => setShowModalAgendarConsulta(true)}>
                 <ButtonTitle>Continuar</ButtonTitle>
-            </ButtonModal>
+            </ButtonModalSelecionarData>
 
             <ButtonSecondaryClinica>
                 <LinkMidiumModal>Cancelar</LinkMidiumModal>

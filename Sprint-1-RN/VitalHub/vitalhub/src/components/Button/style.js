@@ -45,8 +45,8 @@ margin-bottom: 40px;
 
 export const ButtonModal = styled(Button)`
 width: 80%;
-margin-top: 125px;
-margin-bottom: -40px;
+margin-top: 20px;
+margin-bottom: -10px;
 
 `
 
@@ -72,4 +72,13 @@ align-items: center;
 justify-content: center;
 
 
+`
+
+export const ButtonModalAgendarConsulta = styled(ButtonModal)`
+margin-top: 0px;
+
+`
+
+export const ButtonModalSelecionarData = styled(ButtonModal)`
+margin-top: 80px;
 `

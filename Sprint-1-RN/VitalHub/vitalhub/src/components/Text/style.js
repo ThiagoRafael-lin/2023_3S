@@ -107,10 +107,41 @@ font-family: Quicksand_600SemiBold;
 `
 
 export const LabelHorarioDisponivel = styled.Text`
-right: 65px;
-top: 25px;
+right: 45px;
+top: 35px;
 font-size: 14px;
 font-weight: 600;
 font-family: Quicksand_600SemiBold;
+
+`
+export const AgendarTitulo = styled.Text`
+font-size: 20px;
+font-family: MontserratAlternates_600SemiBold;
+margin-bottom: 20px;
+
+`
+
+export const AgendarSubTitulo = styled.Text`
+font-size: 16px;
+font-family: Quicksand_500Medium;
+text-align: center;
+margin-bottom: 30px;
+
+`
+
+export const AgendarTituloConteudo = styled.Text`
+font-size: 16px;
+font-family: Quicksand_600SemiBold;
+text-align: left;
+color: #33303E;
+
+
+`
+
+export const AgendarSubTituloConteudo = styled.Text`
+font-size: 14px;
+font-family: Quicksand_500Medium;
+color: #4E4B59;
+
 
 `

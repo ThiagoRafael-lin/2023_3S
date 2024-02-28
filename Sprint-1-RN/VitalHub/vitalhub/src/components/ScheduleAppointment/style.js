@@ -28,3 +28,12 @@ height: 40%;
 
 
 `
+
+export const ScheduleModalAgendarConsulta = styled.View`
+/* flex: 1; */
+/* align-items: center; */
+/* justify-content: flex-end; */
+background-color: rgba(0, 0, 0, 0.60);
+height: 100%;
+
+`

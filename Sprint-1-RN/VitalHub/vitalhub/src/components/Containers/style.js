@@ -170,6 +170,21 @@ bottom: 44px;
 
 `
 
+export const AgendarConsultaContainerPaciente = styled.View`
+top: 50px;
+left: 20px;
+width: 90%;
+background-color: #fff;
+border-radius: 10px;
+
+`
+
+export const ContainerTituloSubtitulo = styled.View`
+/* border: 1px solid black; */
+align-self: flex-start;
+
+`
+
 export const ContainerHeader = styled(LinearGradient).attrs({
     colors: ["#60bfc5", "#496BBA"],
     start: {x: -0.05, y: 1.08},

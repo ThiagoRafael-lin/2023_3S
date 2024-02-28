@@ -5,8 +5,9 @@ import { ButtonCard, ButtonText, ClockCard, ContainerCardList, ContentCard, Data
 export const AppointmentCard = ({
     situacao = "pendente",
     onPressCancel,
-    onPressAppointment
-
+    onPressAppointment,
+    setMedicalRecordModal,
+    onPress
 
 }) => {
     return (
@@ -15,6 +16,9 @@ export const AppointmentCard = ({
 
             <ProfileImage
                 source={require('../../../assets/ImagemPerfilMedicoPequeno.png')}
+                onPress={() => setMedicalRecordModal(true)}
+                
+            
             />
 
             <ContentCard>
