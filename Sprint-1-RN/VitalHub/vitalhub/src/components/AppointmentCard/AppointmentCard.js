@@ -1,6 +1,7 @@
 import { Container } from "../Containers/style"
 import { AntDesign } from '@expo/vector-icons';
 import { ButtonCard, ButtonText, ClockCard, ContainerCardList, ContentCard, DataProfileCard, ProfileData, ProfileImage, ProfileName, TextAge, TextBold, ViewRow } from "./style";
+import { ButtonModalVerProntuario } from "../Button/style";
 
 export const AppointmentCard = ({
     situacao = "pendente",
@@ -13,13 +14,15 @@ export const AppointmentCard = ({
     return (
         //Container principal
         <ContainerCardList>
+            <ButtonModalVerProntuario>
 
             <ProfileImage
                 source={require('../../../assets/ImagemPerfilMedicoPequeno.png')}
-                onPress={() => setMedicalRecordModal(true)}
+                // onPress={() => setMedicalRecordModal(true)}
                 
             
             />
+            </ButtonModalVerProntuario>
 
             <ContentCard>
 

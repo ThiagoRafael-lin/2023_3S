@@ -1,11 +1,12 @@
-import { ButtonModal, ButtonSecondary, ButtonTitle } from "../Button/style"
-import { LinkMidiumModal } from "../CancellationModal/style"
-import { TitleModal, TitleRecordModal } from "../Title/style"
-import { Modal } from "react-native"
-import { AgePatiente, EmailPatiente, ImageRecordModal, RecordContent, RecordModal } from "./style"
-import { RecordModalInfo } from "../Containers/style"
+import { Modal } from 'react-native'
+import { ButtonModal, ButtonSecondary, ButtonTitle } from '../Button/style'
+import { LinkMidiumModal } from '../CancellationModal/style'
+import { RecordModalInfo } from '../Containers/style'
+import { AgePatiente, EmailPatiente, ImageRecordModal, RecordContent, RecordModal } from '../MedicalRecordModal/style'
+import { TitleRecordModal } from '../Title/style'
 
-export const MedicalRecordModal = ({
+
+export const ModalMedicalRecord = ({
     visible,
     setShowModalAppointment,
     setMedicalRecordModal,
@@ -13,42 +14,40 @@ export const MedicalRecordModal = ({
 }) => {
 
     return (
+        <Modal {...rest} visible={visible} transparent={true} animationType="fade">
 
-        <>
-            <Modal {...rest} visible={visible} transparent={true} animationType="fade">
+            {/* Container */}
+            <RecordModal>
 
-               {/* Container */}
-                <RecordModal>
+                {/* conteudo */}
+                <RecordContent>
 
-                    {/* conteudo */}
-                    <RecordContent>
-
-                        {/* imagem de perfil */}
-                        <ImageRecordModal 
+                    {/* imagem de perfil */}
+                    <ImageRecordModal
                         source={require('../../../assets/imagemPerfilGrande.png')}
-                        />
+                    />
 
-                        {/* titulo/nome */}
-                        <TitleRecordModal>Niccole Sarga</TitleRecordModal>
+                    {/* titulo/nome */}
+                    <TitleRecordModal>Niccole Sarga</TitleRecordModal>
 
-                        {/* Container */}
-                        <RecordModalInfo>
+                    {/* Container */}
+                    <RecordModalInfo>
 
-                            {/* idade do paciente */}
-                            <AgePatiente>22 anos</AgePatiente>
+                        {/* idade do paciente */}
+                        <AgePatiente>22 anos</AgePatiente>
 
-                            {/* email do paciente */}
-                            <EmailPatiente>niccole.sarga@gmail.com</EmailPatiente>
+                        {/* email do paciente */}
+                        <EmailPatiente>niccole.sarga@gmail.com</EmailPatiente>
 
-                        </RecordModalInfo>
+                    </RecordModalInfo>
 
-                        {/* botão Confirmar */}
-                        <ButtonModal>
+                    {/* botão Confirmar */}
+                    <ButtonModal>
 
-                            {/* titulo do botão */}
-                            <ButtonTitle>Inserir Prontuário</ButtonTitle>
+                        {/* titulo do botão */}
+                        <ButtonTitle>Inserir Prontuário</ButtonTitle>
 
-                        </ButtonModal>
+                    </ButtonModal>
 
                     {/* botão cancelar */}
                     <ButtonSecondary onPress={() => setMedicalRecordModal(false)}>
@@ -58,11 +57,10 @@ export const MedicalRecordModal = ({
 
                     </ButtonSecondary>
 
-                    </RecordContent>
-                </RecordModal>
-                
-            </Modal>
-        </>
+                </RecordContent>
+            </RecordModal>
+
+        </Modal>
     )
 
 }

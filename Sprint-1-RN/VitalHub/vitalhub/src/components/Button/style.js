@@ -81,4 +81,15 @@ margin-top: 0px;
 
 export const ButtonModalSelecionarData = styled(ButtonModal)`
 margin-top: 80px;
+
+`
+
+export const ButtonModalVerProntuario = styled.TouchableOpacity`
+border: 2px solid black;
+width: 77px;
+height: 80px;
+border-radius: 5px;
+bottom: 123px;
+left: 40px;
+color: transparent;
 `

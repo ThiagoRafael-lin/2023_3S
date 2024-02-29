@@ -9,9 +9,10 @@ import { CancellationModal } from "../../components/CancellationModal/cancellati
 import { MedicalRecordModal } from "../../components/MedicalRecordModal/MedicalRecordModal";
 import { HeaderPaciente } from "../../components/HeaderPaciente/headerPaciente";
 import { FontAwesome6 } from '@expo/vector-icons';
-import { Stethoscope } from "../../components/Button/style";
+import { ButtonModalVerProntuario, Stethoscope } from "../../components/Button/style";
 import { ScheduleAppointment } from "../../components/ScheduleAppointment/ScheduleAppointment";
 import { FilterAppointment } from "../Home/style";
+import { ModalMedicalRecord } from "../../components/ModalMedicalRecord/ModalMedicalRecord";
 
 const Consultas = [
 
@@ -81,13 +82,18 @@ export const HomePaciente = () => {
                             situacao={item.situacao}
                             onPressCancel={() => setShowModalCancel(true)}
                             onPressAppointment={() => setShowModalAppointment(true)}
-                            onPress={() => setMedicalRecordModal(true)}
+                        // onPress={() => setMedicalRecordModal(true)}
 
                         />
                     )
                 }
             // showsVerticalScrollIndicator={false}
             />
+            <ButtonModalVerProntuario
+                visible={showMedicalRecordModal}
+                setMedicalRecordModal={setMedicalRecordModal}
+                onPress={() => setMedicalRecordModal(true)}>
+            </ButtonModalVerProntuario>
 
             {/* modal Cancelar */}
             <CancellationModal
@@ -109,10 +115,10 @@ export const HomePaciente = () => {
                 setShowModalSchedule={setShowModalSchedule}
             />
 
-                {/* Modal para ver o prontuario paciente */}
-            <MedicalRecordModal
+            {/* Modal para ver o prontuario paciente */}
+            <ModalMedicalRecord
                 visible={showMedicalRecordModal}
-                setMedicalRecordModal={() => setMedicalRecordModal}
+                setMedicalRecordModal={setMedicalRecordModal}
 
             />
 
