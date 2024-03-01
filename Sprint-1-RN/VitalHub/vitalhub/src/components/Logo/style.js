@@ -21,3 +21,10 @@ width: 77px;
 height: 80px;
 
 `
+
+export const LogoVisu = styled.Image`
+width: 412px;
+height: 280px;
+margin-bottom: 20px;
+
+`

@@ -47,4 +47,12 @@ margin-bottom: 40px;
 
 `
 
+export const LocalTitulo = styled.Text`
+font-size: 20px;
+font-family: MontserratAlternates_600SemiBold;
+font-weight: 600;
+margin-top: 20px;
+
+`
+
 

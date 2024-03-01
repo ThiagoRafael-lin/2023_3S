@@ -59,6 +59,12 @@ margin-bottom: 10px;
 
 export const ButtonSecondaryClinica = styled(ButtonSecondary)`
 margin-top: 30px;
+
+`
+
+export const ButtonSecondaryLocal = styled.TouchableOpacity`
+align-items: center;
+margin-top: 90px;
 `
 
 export const Stethoscope = styled.TouchableOpacity`
@@ -92,4 +98,5 @@ border-radius: 5px;
 bottom: 123px;
 left: 40px;
 color: transparent;
+background-color: rgba(0, 0, 0, 0.6);
 `

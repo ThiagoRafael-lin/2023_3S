@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Input } from "../Input/style";
 
 export const InputPerfil = styled.TextInput.attrs({
     placeholderTextColor: "black"
@@ -31,6 +32,22 @@ padding-bottom: 70px;
 padding-left: 15px;
 
 `
+
+export const InputProntuarioExame = styled(InputProntuario)`
+font-size: 15px;
+font-family: Quicksand_600SemiBold;
+left: 1px;
+text-align: center;
+padding-bottom: 20px;
+`
+
+
+export const InputProntuarioVisu = styled(InputProntuario)`
+padding-bottom: 0px;
+padding-left: 12px;
+padding-bottom: 40px;
+
+`
 export const InputProntuarioDiag = styled(InputPerfil).attrs({
     placeholderTextColor: "#49B3BA"
 })`
@@ -46,6 +63,11 @@ export const LabelInput = styled.SafeAreaView`
 
 bottom: -20px;
 right: 110px;
+
+`
+export const InputProntuarioResultado = styled(InputProntuario)`
+height: 103px;
+padding-bottom: 10px;
 
 `
 export const LabelInput2 = styled(LabelInput)`
@@ -99,6 +121,19 @@ font-family: Quicksand_600SemiBold;
 left: 15px;
 
 `
+export const LabelProntuarioExames = styled.Text`
+font-size: 15px;
+font-family: Quicksand_600SemiBold;
+left: -6px;
+
+`
+export const LabelProntuarioVisu = styled.Text`
+font-size: 15px;
+font-family: Quicksand_600SemiBold;
+left: 1px;
+
+`
+
 export const LabelPerfil2 = styled.Text`
 margin-top: 20px;
 font-family: Quicksand_600SemiBold;

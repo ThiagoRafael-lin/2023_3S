@@ -24,20 +24,20 @@ export const ModalMedicalRecord = ({
 
                     {/* imagem de perfil */}
                     <ImageRecordModal
-                        source={require('../../../assets/imagemPerfilGrande.png')}
+                        source={require('../../../assets/ImagemMedicoMedio.png')}
                     />
 
                     {/* titulo/nome */}
-                    <TitleRecordModal>Niccole Sarga</TitleRecordModal>
+                    <TitleRecordModal>Dr. Claudio</TitleRecordModal>
 
                     {/* Container */}
                     <RecordModalInfo>
 
                         {/* idade do paciente */}
-                        <AgePatiente>22 anos</AgePatiente>
+                        <AgePatiente>Cliníco geral</AgePatiente>
 
                         {/* email do paciente */}
-                        <EmailPatiente>niccole.sarga@gmail.com</EmailPatiente>
+                        <EmailPatiente>CRM-15286</EmailPatiente>
 
                     </RecordModalInfo>
 
@@ -45,7 +45,7 @@ export const ModalMedicalRecord = ({
                     <ButtonModal>
 
                         {/* titulo do botão */}
-                        <ButtonTitle>Inserir Prontuário</ButtonTitle>
+                        <ButtonTitle>Ver local da consulta</ButtonTitle>
 
                     </ButtonModal>
 

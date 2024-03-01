@@ -17,7 +17,7 @@ export const Navegacao = ({ navigation }) => {
             />
             <Button
                 title="Criar a Conta"
-                onPress={() => navigation.navigate("criarAConta")}
+                onPress={() => navigation.navigate("CriarAConta")}
             />
             <Button
                 title="Perfil"
@@ -46,6 +46,14 @@ export const Navegacao = ({ navigation }) => {
             <Button
                 title="Selecionar a Data"
                 onPress={() => navigation.navigate("SelecionarData")}
+            />
+            <Button
+                title="Local da Consulta"
+                onPress={() => navigation.navigate("LocalConsulta")}
+            />
+            <Button
+                title="Visualizar o Prontuario"
+                onPress={() => navigation.navigate("VisualizarProntuario")}
             />
             
         </View>

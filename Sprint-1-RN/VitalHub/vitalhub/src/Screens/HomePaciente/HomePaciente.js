@@ -119,7 +119,6 @@ export const HomePaciente = () => {
             <ModalMedicalRecord
                 visible={showMedicalRecordModal}
                 setMedicalRecordModal={setMedicalRecordModal}
-
             />
 
 

@@ -145,3 +145,34 @@ color: #4E4B59;
 
 
 `
+
+export const LocalSubTitulo = styled.Text`
+font-size: 16px;
+font-family: Quicksand_600SemiBold;
+font-weight: 600px;
+margin-bottom: 50px;
+
+`
+
+export  const LabelEndereco = styled.Text`
+font-size: 16px;
+font-family: Quicksand_600SemiBold;
+font-weight: 600px;
+
+`
+export  const LabelEnderecoEndereco = styled.Text`
+font-size: 16px;
+font-family: Quicksand_600SemiBold;
+font-weight: 600px;
+margin-left: 20px;
+margin-bottom: -20px;
+
+`
+
+export const LabelEnderecoBairro = styled.Text`
+font-size: 16px;
+font-family: Quicksand_600SemiBold;
+font-weight: 600px;
+right: 15px;
+
+`

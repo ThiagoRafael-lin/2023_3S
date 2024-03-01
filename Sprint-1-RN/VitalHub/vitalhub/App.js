@@ -13,7 +13,6 @@ import { Login } from './src/Screens/Login/login';
 import { esqueceuSuaSenha } from './src/Screens/EsqueceuSenha/esqueceuSenha';
 import { verificarEmail } from './src/Screens/VerifiqueEmail/verificarSenha'
 import { redefinirSenha } from './src/Screens/RedefinirSenha/redefinirSenha'
-import { CriarAConta } from './src/Screens/CriarConta/criarConta';
 import { Perfil } from './src/Screens/Perfil/perfil';
 import { Prontuario } from './src/Screens/Prontuario/prontuario';
 // import { Header } from './src/components/Header/header'
@@ -22,6 +21,9 @@ import { HomePaciente } from './src/Screens/HomePaciente/HomePaciente';
 import { SelecionarClinica } from './src/Screens/SelecionarClinica/selecionarClinica';
 import { SelecionarMedico } from './src/Screens/SelecionarMedico/SelecionarMedico';
 import { SelecionarData } from './src/Screens/SelecionarData/SelecionarData';
+import { LocalConsulta } from './src/Screens/LocalConsulta/LocalConsulta';
+import { CriarAConta } from './src/Screens/CriarAConta/CriarAConta';
+import { VisualizarProntuario } from './src/Screens/VisualizarProntuario/VisualizarProntuario';
 
 export default function App() {
 
@@ -150,6 +152,20 @@ export default function App() {
           name="SelecionarData"
           component={SelecionarData}
           options={{ title: "SelecionarData" }}
+
+        />
+        <Stack.Screen
+
+          name="LocalConsulta"
+          component={LocalConsulta}
+          options={{ title: "LocalConsulta" }}
+
+        />
+        <Stack.Screen
+
+          name="VisualizarProntuario"
+          component={VisualizarProntuario}
+          options={{ title: "VisualizarProntuario" }}
 
         />
         

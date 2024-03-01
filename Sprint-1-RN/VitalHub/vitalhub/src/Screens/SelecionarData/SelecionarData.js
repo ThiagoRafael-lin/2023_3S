@@ -10,6 +10,7 @@ import InputSelect from "../../components/InputSelect/InputSelect"
 import { useState } from "react"
 import { AgendarConsulta } from "../../components/AgendarConsulta/AgendarConsulta"
 
+
 export const SelecionarData = () => {
 
     const [showModalAgendarConsulta, setShowModalAgendarConsulta] = useState(false);

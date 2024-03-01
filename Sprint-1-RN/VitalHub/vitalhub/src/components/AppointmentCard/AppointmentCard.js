@@ -16,12 +16,12 @@ export const AppointmentCard = ({
         <ContainerCardList>
             <ButtonModalVerProntuario>
 
-            <ProfileImage
-                source={require('../../../assets/ImagemPerfilMedicoPequeno.png')}
+                <ProfileImage
+                    source={require('../../../assets/ImagemPerfilMedicoPequeno.png')}
                 // onPress={() => setMedicalRecordModal(true)}
-                
-            
-            />
+
+
+                />
             </ButtonModalVerProntuario>
 
             <ContentCard>

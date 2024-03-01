@@ -185,6 +185,22 @@ align-self: flex-start;
 
 `
 
+export const LocalConsultaContainer = styled.View`
+width: 100%;
+align-items: center;
+
+`
+
+export const ContainerTituloConsulta = styled.View`
+align-items: center;
+justify-content: center;
+
+`
+
+export const ContainerVisu = styled.View`
+width: 100%;
+`
+
 export const ContainerHeader = styled(LinearGradient).attrs({
     colors: ["#60bfc5", "#496BBA"],
     start: {x: -0.05, y: 1.08},

@@ -109,3 +109,20 @@ border: 2px solid #49B3BA;
 
 `
 
+export const InputLocal = styled(Input).attrs({
+    placeholderTextColor: "#33303E"
+})`
+background-color: #F5F3F3;
+border-color: #F5F3F3;
+margin-left: 20px;
+
+`
+export const InputLocalContent = styled(Input).attrs({
+    placeholderTextColor: "#33303E"
+})`
+background-color: #F5F3F3;
+border-color: #F5F3F3;
+right: 70px;
+
+`
+
