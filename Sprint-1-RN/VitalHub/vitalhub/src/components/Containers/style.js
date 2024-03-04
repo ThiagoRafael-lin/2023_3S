@@ -32,6 +32,13 @@ height: 100%;
 
 `
 
+export const Line = styled.View`
+width: 89%;
+background-color: black;
+border: 1px solid #8C8A97;
+border-radius: 2px;
+`
+
 export const RecordModalInfo = styled.View`
 flex-direction: row;
 gap: 20px;
@@ -44,7 +51,7 @@ height: 30px;
 export const MedicalInstrument = styled.View`
 position: absolute;
 left: 80%;
-top: 145%;
+top: 140%;
 
 `
 

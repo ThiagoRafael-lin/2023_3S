@@ -68,9 +68,22 @@ font-size: 16px;
 
 `
 
+export const TextInputTitle = styled(TextInputShadow)`
+
+font-size: 20px;
+`
+
 export const TextInputShadowEmail = styled(TextInputShadow)`
 
 font-family: Quicksand_500Medium;
+
+`
+
+export const TextInputSubTitulo = styled.Text`
+
+font-family: Quicksand_500Medium;
+font-size: 16px;
+color: #5F5C6B;
 
 `
 

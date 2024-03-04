@@ -30,6 +30,12 @@ font-family: Quicksand_500Medium;
 
 `
 
+export const ModalTextCancellation = styled(ModalText)`
+margin-bottom: 10px;
+padding-bottom: -30px;
+
+`
+
 export const LinkMidiumModal = styled.Text`
 
     color: #496BBA;
@@ -39,5 +45,15 @@ export const LinkMidiumModal = styled.Text`
     text-decoration-color: #496BBA;
     align-self: center;
     margin-top: 16px;
+
 `
 
+export const LinkMidiumVisualizar = styled(LinkMidiumModal)`
+left: 100px;
+bottom: 39px;
+color: #C81D25;
+text-decoration: none;
+
+
+
+`

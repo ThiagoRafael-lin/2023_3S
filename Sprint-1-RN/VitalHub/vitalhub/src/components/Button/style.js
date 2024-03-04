@@ -22,6 +22,14 @@ text-transform: uppercase;
 
 
 `
+export const ButtonTitleVizualizar = styled.Text`
+
+font-family: MontserratAlternates_600SemiBold;
+color: white;
+text-transform: uppercase;
+/* padding-left: 60px; */
+
+`
 
 export const ButtonRecuperar = styled(Button)`
 margin-top: 25px;
@@ -45,9 +53,14 @@ margin-bottom: 40px;
 
 export const ButtonModal = styled(Button)`
 width: 80%;
-margin-top: 20px;
-margin-bottom: -10px;
+margin-top: 130px;
+margin-bottom: -50px;
 
+`
+
+export const ButtonModalCancellation = styled(ButtonModal)`
+margin-top: 30px;
+margin-bottom: 0px;
 `
 
 export const ButtonSecondary = styled(Button)`
@@ -65,6 +78,22 @@ margin-top: 30px;
 export const ButtonSecondaryLocal = styled.TouchableOpacity`
 align-items: center;
 margin-top: 90px;
+
+`
+export const ButtonSecondaryLocalConsulta = styled.TouchableOpacity`
+align-items: center;
+margin-top: 30px;
+
+`
+
+export const ButtonSecondaryVisu = styled.TouchableOpacity`
+align-items: center;
+
+`
+export const ButtonSecondaryVisualizar = styled.TouchableOpacity`
+align-items: center;
+margin-top: 15px;
+margin-bottom: 25px;
 `
 
 export const Stethoscope = styled.TouchableOpacity`
@@ -89,14 +118,29 @@ export const ButtonModalSelecionarData = styled(ButtonModal)`
 margin-top: 80px;
 
 `
+export const ButtonModalVizualizarProntuario = styled(ButtonModal)`
+/* margin-top: 80px; */
+width: 195px;
+flex-direction: row;
+/* gap: -56px; */
+background-color: #49B3BA;
+border-color: #49B3BA;
+gap: 10px;
+align-self: flex-start;
+margin-left: 22px;
+
+
+`
+
+
 
 export const ButtonModalVerProntuario = styled.TouchableOpacity`
-border: 2px solid black;
+/* border: 2px solid black; */
 width: 77px;
 height: 80px;
 border-radius: 5px;
-bottom: 123px;
-left: 40px;
-color: transparent;
-background-color: rgba(0, 0, 0, 0.6);
+/* bottom: 123px; */
+/* left: 40px; */
+
+/* background-color: rgba(0, 0, 0, 0.6); */
 `

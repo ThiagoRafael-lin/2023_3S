@@ -176,3 +176,23 @@ font-weight: 600px;
 right: 15px;
 
 `
+
+export const InputProntuarioVisu = styled.Text`
+/* padding-bottom: 0px;
+padding-left: 12px;
+padding-bottom: 40px; */
+width: 90%;
+height: 120px;
+padding: 15px;
+
+margin-top: 30px;
+background-color: #F5F3F3;
+border-color: #F5F3F3;
+border-radius: 5px;
+font-family: MontserratAlternates_500Medium;
+
+`
+export const InputProntuarioDesc = styled(InputProntuarioVisu)`
+height: 70px;
+
+`

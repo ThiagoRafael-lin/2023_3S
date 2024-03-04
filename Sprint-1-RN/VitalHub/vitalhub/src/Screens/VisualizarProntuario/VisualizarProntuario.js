@@ -1,10 +1,11 @@
-import { ButtonPerfil, ButtonPerfilSair, ButtonSecondaryLocal, ButtonTitle } from '../../components/Button/style'
-import { LinkMidiumModal } from '../../components/CancellationModal/style'
-import { ContainerPerfil, ScroolForm } from '../../components/Containers/style'
-import { InputBoxShadow, TextInputShadow, TextInputShadowEmail } from '../../components/Input/style'
-import { InputProntuario, InputProntuarioDiag, InputProntuarioExame, InputProntuarioResultado, InputProntuarioVisu, LabelInput, LabelProntuarioDesc, LabelProntuarioDiag, LabelProntuarioExames, LabelProntuarioVisu } from '../../components/InputPerfil/style'
+import { ButtonModalVizualizarProntuario, ButtonPerfil, ButtonPerfilSair, ButtonSecondaryLocal, ButtonSecondaryVisu, ButtonSecondaryVisualizar, ButtonTitle, ButtonTitleVizualizar } from '../../components/Button/style'
+import { LinkMidiumModal, LinkMidiumVisualizar } from '../../components/CancellationModal/style'
+import { ContainerPerfil, Line, ScroolForm } from '../../components/Containers/style'
+import { InputBoxShadow, TextInputShadow, TextInputShadowEmail, TextInputSubTitulo, TextInputTitle } from '../../components/Input/style'
+import { InputProntuario, InputProntuarioDiag, InputProntuarioDiagPaciente, InputProntuarioExame, InputProntuarioPrescri, InputProntuarioResultado, LabelInput, LabelProntuarioDesc, LabelProntuarioDiag, LabelProntuarioExames, LabelProntuarioVisu } from '../../components/InputPerfil/style'
 import { Logo, LogoVisu } from '../../components/Logo/style'
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { InputProntuarioDesc, InputProntuarioVisu } from '../../components/Text/style'
 
 export const VisualizarProntuario = () => {
     return (
@@ -17,8 +18,8 @@ export const VisualizarProntuario = () => {
                     source={require('../../../assets/ImagemMedicoGrande.png')}
                 />
 
-                <TextInputShadow>Dr. Claudio</TextInputShadow>
-                <TextInputShadowEmail>Cliníco geral CRM-15286</TextInputShadowEmail>
+                <TextInputTitle>Dr. Claudio</TextInputTitle>
+                <TextInputSubTitulo>Cliníco geral CRM-15286</TextInputSubTitulo>
 
 
                 <LabelInput>
@@ -26,31 +27,31 @@ export const VisualizarProntuario = () => {
                     <LabelProntuarioDiag>Descrição da consulta</LabelProntuarioDiag>
 
                 </LabelInput>
-                <InputProntuarioVisu
-                    placeholder='O paciente possuí uma infecção no ouvido.
-                    Necessário repouse de 2 dias e acompanhamento médico constante'
-
-                />
+                <InputProntuarioVisu>
+                    O paciente possuí uma
+                    infecção no ouvido. Necessário repouse de 2 dias e acompanhamento médico constante
+                </InputProntuarioVisu>
 
                 <LabelInput>
 
                     <LabelProntuarioDesc>Diagnóstico do paciente</LabelProntuarioDesc>
 
                 </LabelInput>
-                <InputProntuarioDiag
-                    placeholder='Infecção no ouvido'
-
-                />
+                <InputProntuarioDesc>
+                    Infecção no ouvido
+                </InputProntuarioDesc>
 
                 <LabelInput>
 
                     <LabelProntuarioVisu>Prescrição médica</LabelProntuarioVisu>
 
                 </LabelInput>
-                <InputProntuario
-                    placeholder='Medicamento: Advil Dosagem: 50 mg Frequência: 3 vezes ao dia Duração: 3 dias'
-
-                />
+                <InputProntuarioVisu>
+                    Medicamento: Advil{'\n'}
+                    Dosagem: 50 mg{'\n'}
+                    Frequência: 3 vezes ao dia{'\n'}
+                    Duração: 3 dias
+                </InputProntuarioVisu>
 
                 <LabelInput>
 
@@ -65,16 +66,24 @@ export const VisualizarProntuario = () => {
 
                 {/* fazer os dois botoes "enviar" e "cancelar" */}
 
+                <ButtonModalVizualizarProntuario>
+                    <MaterialCommunityIcons name="camera-plus-outline" size={24} color="#fff" />
+                    <ButtonTitleVizualizar>Enviar</ButtonTitleVizualizar>
 
+                </ButtonModalVizualizarProntuario>
+                <ButtonSecondaryVisu>
+                    <LinkMidiumVisualizar>Cancelar</LinkMidiumVisualizar>
+                </ButtonSecondaryVisu>
 
-                <InputProntuarioResultado
-                    placeholder='Resultado do exame de sangue : tudo normal'
+                <Line></Line>
 
-                />
+                <InputProntuarioDesc>
+                    Resultado do exame de sangue : tudo normal
+                </InputProntuarioDesc>
 
-                <ButtonSecondaryLocal>
+                <ButtonSecondaryVisualizar>
                     <LinkMidiumModal>Voltar</LinkMidiumModal>
-                </ButtonSecondaryLocal>
+                </ButtonSecondaryVisualizar>
 
             </ContainerPerfil>
         </ScroolForm>

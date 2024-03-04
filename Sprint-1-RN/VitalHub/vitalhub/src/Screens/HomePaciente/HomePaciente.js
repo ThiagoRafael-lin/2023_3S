@@ -82,18 +82,22 @@ export const HomePaciente = () => {
                             situacao={item.situacao}
                             onPressCancel={() => setShowModalCancel(true)}
                             onPressAppointment={() => setShowModalAppointment(true)}
-                        // onPress={() => setMedicalRecordModal(true)}
-
+                            name={"Dr.Claudiu"}
                         />
                     )
                 }
             // showsVerticalScrollIndicator={false}
             />
-            <ButtonModalVerProntuario
+
+            
+
+            {/* <ButtonModalVerProntuario
                 visible={showMedicalRecordModal}
                 setMedicalRecordModal={setMedicalRecordModal}
                 onPress={() => setMedicalRecordModal(true)}>
-            </ButtonModalVerProntuario>
+            </ButtonModalVerProntuario> */}
+
+
 
             {/* modal Cancelar */}
             <CancellationModal

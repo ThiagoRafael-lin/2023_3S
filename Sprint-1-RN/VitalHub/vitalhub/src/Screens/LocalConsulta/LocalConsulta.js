@@ -3,7 +3,7 @@ import { InputLocal, InputLocalContent } from '../../components/Input/style'
 import { LabelEndereco, LabelEnderecoBairro, LabelEnderecoEndereco, LocalSubTitulo } from '../../components/Text/style'
 import { LocalTitulo } from '../../components/Title/style'
 import { LocalConsultaContent, LocalContainerContent, Mapa } from './style'
-import { ButtonSecondaryClinica, ButtonSecondaryLocal } from '../../components/Button/style';
+import { ButtonSecondaryClinica, ButtonSecondaryLocal, ButtonSecondaryLocalConsulta } from '../../components/Button/style';
 import { LinkMidiumModal } from "../../components/CancellationModal/style";
 
 
@@ -64,9 +64,9 @@ export const LocalConsulta = () => {
 
                 </LocalContainerContent>
 
-                <ButtonSecondaryLocal>
+                <ButtonSecondaryLocalConsulta>
                     <LinkMidiumModal>Voltar</LinkMidiumModal>
-                </ButtonSecondaryLocal>
+                </ButtonSecondaryLocalConsulta>
 
 
             </LocalConsultaContent>

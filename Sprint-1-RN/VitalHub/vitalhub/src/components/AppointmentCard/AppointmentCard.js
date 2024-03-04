@@ -8,12 +8,15 @@ export const AppointmentCard = ({
     onPressCancel,
     onPressAppointment,
     setMedicalRecordModal,
-    onPress
-
+    onPress,
+    name
+    
 }) => {
     return (
         //Container principal
         <ContainerCardList>
+
+            {/* arrumar o o botao de ver modal */}
             <ButtonModalVerProntuario>
 
                 <ProfileImage
@@ -28,7 +31,7 @@ export const AppointmentCard = ({
 
                 <DataProfileCard>
 
-                    <ProfileName>Dr. Claudio</ProfileName>
+                    <ProfileName>{name}</ProfileName>
 
                     <ProfileData>
                         <TextAge>22 anos</TextAge>

@@ -33,21 +33,34 @@ padding-left: 15px;
 
 `
 
+export const InputProntuarioPrescri = styled(InputProntuario)`
+
+
+
+`
+
 export const InputProntuarioExame = styled(InputProntuario)`
 font-size: 15px;
 font-family: Quicksand_600SemiBold;
 left: 1px;
+background-color: #F5F3F3;
+border-color: #F5F3F3;
 text-align: center;
-padding-bottom: 20px;
+padding-bottom: 10px;
+padding-right: 10px;
 `
 
 
-export const InputProntuarioVisu = styled(InputProntuario)`
-padding-bottom: 0px;
-padding-left: 12px;
-padding-bottom: 40px;
+// export const InputProntuarioVisu = styled(InputProntuario).attrs({
+//     placeholderTextColor: "#000"
+// })`
+// padding-bottom: 0px;
+// padding-left: 12px;
+// padding-bottom: 40px;
+// background-color: #F5F3F3;
+// border-color: #F5F3F3;
 
-`
+// `
 export const InputProntuarioDiag = styled(InputPerfil).attrs({
     placeholderTextColor: "#49B3BA"
 })`
@@ -55,6 +68,14 @@ font-family: MontserratAlternates_500Medium;
 background-color: white;
 border-color: #49B3BA;
 height: 53px;
+
+
+`
+
+export const InputProntuarioDiagPaciente = styled(InputPerfil).attrs({
+    placeholderTextColor: "#000"
+})`
+font-family: MontserratAlternates_500Medium;
 
 
 `

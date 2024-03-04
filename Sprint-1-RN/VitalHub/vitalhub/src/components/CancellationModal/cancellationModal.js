@@ -1,6 +1,6 @@
 import { Modal } from "react-native"
 import { LinkMidiumModal } from "./style"
-import { ButtonSecondary } from "../Button/style"
+import { ButtonModalCancellation, ButtonSecondary } from "../Button/style"
 import { ModalContent, ModalText, PatientModal } from "./style"
 import { TitleModal } from "../Title/style"
 import { ButtonModal, ButtonTitle } from "../Button/style"
@@ -26,9 +26,9 @@ export const CancellationModal = ({
                         </ModalText>
 
                         {/* Button */}
-                        <ButtonModal>
+                        <ButtonModalCancellation>
                             <ButtonTitle>Confirmar</ButtonTitle>
-                        </ButtonModal>
+                        </ButtonModalCancellation>
 
                         <ButtonSecondary onPress={() => setShowModalCancel(false)}>
                             <LinkMidiumModal>Cancelar</LinkMidiumModal>
