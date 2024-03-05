@@ -48,6 +48,8 @@ border-color: #F5F3F3;
 text-align: center;
 padding-bottom: 10px;
 padding-right: 10px;
+
+
 `
 
 

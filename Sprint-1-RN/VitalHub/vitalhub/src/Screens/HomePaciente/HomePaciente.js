@@ -100,6 +100,7 @@ export const HomePaciente = () => {
 
 
             {/* modal Cancelar */}
+            
             <CancellationModal
                 visible={showModalCancel}
                 setShowModalCancel={setShowModalCancel}
@@ -120,6 +121,7 @@ export const HomePaciente = () => {
             />
 
             {/* Modal para ver o prontuario paciente */}
+
             <ModalMedicalRecord
                 visible={showMedicalRecordModal}
                 setMedicalRecordModal={setMedicalRecordModal}

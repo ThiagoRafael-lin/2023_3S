@@ -24,6 +24,7 @@ import { SelecionarData } from './src/Screens/SelecionarData/SelecionarData';
 import { LocalConsulta } from './src/Screens/LocalConsulta/LocalConsulta';
 import { CriarAConta } from './src/Screens/CriarAConta/CriarAConta';
 import { VisualizarProntuario } from './src/Screens/VisualizarProntuario/VisualizarProntuario';
+import { Main } from './src/Screens/Main/Main';
 
 export default function App() {
 
@@ -55,15 +56,8 @@ export default function App() {
     //options(title): título da tela
 
     <NavigationContainer>
+
       <Stack.Navigator>
-
-        <Stack.Screen
-
-          name="navegacao"
-          component={Navegacao}
-          options={{ title: "Navegação" }}
-
-        />
 
         <Stack.Screen
 
@@ -72,6 +66,20 @@ export default function App() {
           options={{ title: "Login" }}
 
         />
+        
+        <Stack.Screen
+          name='Main'
+          component={Main}
+        />
+
+        {/* <Stack.Screen
+
+          name="navegacao"
+          component={Navegacao}
+          options={{ title: "Navegação" }}
+
+        /> */}
+
 
         <Stack.Screen
 
@@ -168,7 +176,7 @@ export default function App() {
           options={{ title: "VisualizarProntuario" }}
 
         />
-        
+
 
       </Stack.Navigator>
     </NavigationContainer>

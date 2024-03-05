@@ -53,7 +53,7 @@ margin-bottom: 40px;
 
 export const ButtonModal = styled(Button)`
 width: 80%;
-margin-top: 130px;
+margin-top: 70px;
 margin-bottom: -50px;
 
 `
@@ -66,12 +66,14 @@ margin-bottom: 0px;
 export const ButtonSecondary = styled(Button)`
 background-color: transparent;
 border: none;
-margin-bottom: 10px;
+margin-top: 40px;
+margin-bottom: 0px;
 
 `
 
 export const ButtonSecondaryClinica = styled(ButtonSecondary)`
 margin-top: 30px;
+margin-bottom: 90px;
 
 `
 
@@ -127,6 +129,8 @@ background-color: #49B3BA;
 border-color: #49B3BA;
 gap: 10px;
 align-self: flex-start;
+margin-top: 30px;
+margin-bottom: -10px;
 margin-left: 22px;
 
 

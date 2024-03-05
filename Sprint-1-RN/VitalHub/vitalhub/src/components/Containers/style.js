@@ -51,7 +51,7 @@ height: 30px;
 export const MedicalInstrument = styled.View`
 position: absolute;
 left: 80%;
-top: 140%;
+top: 130%;
 
 `
 

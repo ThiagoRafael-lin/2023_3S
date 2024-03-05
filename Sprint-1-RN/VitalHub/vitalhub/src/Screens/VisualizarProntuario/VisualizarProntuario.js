@@ -63,9 +63,6 @@ export const VisualizarProntuario = () => {
                     Nenhuma foto informada
                 </InputProntuarioExame>
 
-
-                {/* fazer os dois botoes "enviar" e "cancelar" */}
-
                 <ButtonModalVizualizarProntuario>
                     <MaterialCommunityIcons name="camera-plus-outline" size={24} color="#fff" />
                     <ButtonTitleVizualizar>Enviar</ButtonTitleVizualizar>

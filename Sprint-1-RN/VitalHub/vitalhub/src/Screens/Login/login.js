@@ -8,7 +8,11 @@ import { ButtonGoogle, ButtonTitleGoogle } from "../../components/ButtonGoogle/s
 import { AntDesign } from '@expo/vector-icons';
 
 
-export const Login = ({navigation}) => {
+export const Login = ({ navigation }) => {
+
+    async function Login() {
+        navigation.navigate("Main")
+    }
 
     return (
 
@@ -33,11 +37,11 @@ export const Login = ({navigation}) => {
             />
 
             <LinkMidium
-            onPress={() => navigation.navigate('esqueceuSuaSenha')}>
+                onPress={() => navigation.navigate('esqueceuSuaSenha')}>
                 Esqueceu sua senha?
             </LinkMidium>
 
-            <Button>
+            <Button onPress={(e) => Login()}>
                 <ButtonTitle>Entrar</ButtonTitle>
             </Button>
 
@@ -51,11 +55,7 @@ export const Login = ({navigation}) => {
 
             <ContentAccount>
                 <TextAccount>
-                    Não tem conta?
-                    <LinkAccount
-                                onPress={() => navigation.navigate('criarAConta')}
-                    >
-                        Crie uma agora!
+                    Não tem conta? <LinkAccount onPress={() => navigation.replace('CriarAConta')}> Crie uma agora!
                     </LinkAccount>
                 </TextAccount>
             </ContentAccount>

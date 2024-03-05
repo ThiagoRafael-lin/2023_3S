@@ -29,7 +29,7 @@ export const esqueceuSuaSenha = ({navigation}) => {
 
             <ButtonRecuperar>
                 <ButtonTitle
-                    onPress={() => navigation.navigate('verificarEmail')} //funcionalidade de passar de tela não funcionando
+                    onPress={() => navigation.replace('verificarEmail')} //funcionalidade de passar de tela não funcionando
 
                     >
                     Continuar
