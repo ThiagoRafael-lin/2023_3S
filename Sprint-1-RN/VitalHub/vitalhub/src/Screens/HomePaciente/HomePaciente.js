@@ -24,7 +24,9 @@ const Consultas = [
 
 ];
 
-export const HomePaciente = () => {
+export const HomePaciente = ({ 
+    navigation,
+ }) => {
 
     // state para o estado da lista(cards)
     const [statusLista, setStatusLista] = useState("pendente");
@@ -40,7 +42,9 @@ export const HomePaciente = () => {
         <ContainerConsulta>
 
             {/* Header */}
-            <HeaderPaciente />
+            <HeaderPaciente
+            navigation={navigation}
+            />
 
             {/* CalendarHome */}
             <CalendarHome />
@@ -83,13 +87,14 @@ export const HomePaciente = () => {
                             onPressCancel={() => setShowModalCancel(true)}
                             onPressAppointment={() => setShowModalAppointment(true)}
                             name={"Dr.Claudiu"}
+                            navigation={navigation}
                         />
                     )
                 }
             // showsVerticalScrollIndicator={false}
             />
 
-            
+
 
             {/* <ButtonModalVerProntuario
                 visible={showMedicalRecordModal}
@@ -100,7 +105,7 @@ export const HomePaciente = () => {
 
 
             {/* modal Cancelar */}
-            
+
             <CancellationModal
                 visible={showModalCancel}
                 setShowModalCancel={setShowModalCancel}
@@ -118,6 +123,7 @@ export const HomePaciente = () => {
             <ScheduleAppointment
                 visible={showModalSchedule}
                 setShowModalSchedule={setShowModalSchedule}
+                navigation={navigation}
             />
 
             {/* Modal para ver o prontuario paciente */}
@@ -125,6 +131,7 @@ export const HomePaciente = () => {
             <ModalMedicalRecord
                 visible={showMedicalRecordModal}
                 setMedicalRecordModal={setMedicalRecordModal}
+                navigation={navigation}
             />
 
 

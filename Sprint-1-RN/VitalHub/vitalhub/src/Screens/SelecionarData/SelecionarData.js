@@ -11,7 +11,9 @@ import { useState } from "react"
 import { AgendarConsulta } from "../../components/AgendarConsulta/AgendarConsulta"
 
 
-export const SelecionarData = () => {
+export const SelecionarData = ({
+    navigation
+}) => {
 
     const [showModalAgendarConsulta, setShowModalAgendarConsulta] = useState(false);
 
@@ -32,13 +34,14 @@ export const SelecionarData = () => {
             <AgendarConsulta
                 visible={showModalAgendarConsulta}
                 setShowModalAgendarConsulta={setShowModalAgendarConsulta}
+                navigation={navigation}
             />
 
             <ButtonModalSelecionarData onPress={() => setShowModalAgendarConsulta(true)}>
                 <ButtonTitle>Continuar</ButtonTitle>
             </ButtonModalSelecionarData>
 
-            <ButtonSecondaryClinica>
+            <ButtonSecondaryClinica onPress={() => navigation.navigate('HomePaciente')}>
                 <LinkMidiumModal>Cancelar</LinkMidiumModal>
             </ButtonSecondaryClinica>
 

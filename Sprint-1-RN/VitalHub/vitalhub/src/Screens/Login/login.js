@@ -37,7 +37,7 @@ export const Login = ({ navigation }) => {
             />
 
             <LinkMidium
-                onPress={() => navigation.navigate('esqueceuSuaSenha')}>
+                onPress={() => navigation.replace('esqueceuSuaSenha')}>
                 Esqueceu sua senha?
             </LinkMidium>
 

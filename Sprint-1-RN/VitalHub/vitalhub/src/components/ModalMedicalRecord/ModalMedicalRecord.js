@@ -10,6 +10,7 @@ export const ModalMedicalRecord = ({
     visible,
     setShowModalAppointment,
     setMedicalRecordModal,
+    navigation,
     ...rest
 }) => {
 
@@ -42,7 +43,7 @@ export const ModalMedicalRecord = ({
                     </RecordModalInfo>
 
                     {/* botão Confirmar */}
-                    <ButtonModal>
+                    <ButtonModal onPress={() => navigation.navigate('LocalConsulta')} >
 
                         {/* titulo do botão */}
                         <ButtonTitle>Ver local da consulta</ButtonTitle>
@@ -50,7 +51,7 @@ export const ModalMedicalRecord = ({
                     </ButtonModal>
 
                     {/* botão cancelar */}
-                    <ButtonSecondary onPress={() => setMedicalRecordModal(false)}>
+                    <ButtonSecondary onPress={() => navigation.navigate('HomePaciente')}>
 
                         {/* titulo do botão */}
                         <LinkMidiumModal>Cancelar</LinkMidiumModal>

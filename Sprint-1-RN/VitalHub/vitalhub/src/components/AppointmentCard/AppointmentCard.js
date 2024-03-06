@@ -9,15 +9,16 @@ export const AppointmentCard = ({
     onPressAppointment,
     setMedicalRecordModal,
     onPress,
-    name
+    name,
+    navigation,
     
 }) => {
     return (
         //Container principal
-        <ContainerCardList>
+        <ContainerCardList >
 
             {/* arrumar o o botao de ver modal */}
-            <ButtonModalVerProntuario>
+            <ButtonModalVerProntuario onPress={() => navigation.navigate('ModalMedicalRecord')}>
 
                 <ProfileImage
                     source={require('../../../assets/ImagemPerfilMedicoPequeno.png')}
@@ -59,7 +60,7 @@ export const AppointmentCard = ({
                             </ButtonCard>
                         ) : (
                             <ButtonCard onPress={onPressAppointment}>
-                                <ButtonText situacao={situacao}>Ver prontuário</ButtonText>
+                                <ButtonText situacao={situacao} onPress={() => navigation.replace('VisualizarProntuario')}>Ver prontuário</ButtonText>
                             </ButtonCard>
                         )
                     }

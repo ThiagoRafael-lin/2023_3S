@@ -43,7 +43,7 @@ margin-top: 20px;
 
 export const ButtonPerfilSair = styled(Button)`
 
-width: 371px;
+width: 50%;
 background-color: #ACABB7;
 border-color: #ACABB7;
 margin-top: 20px;
@@ -139,6 +139,17 @@ margin-left: 22px;
 
 
 export const ButtonModalVerProntuario = styled.TouchableOpacity`
+/* border: 2px solid black; */
+width: 77px;
+height: 80px;
+border-radius: 5px;
+/* bottom: 123px; */
+/* left: 40px; */
+
+/* background-color: rgba(0, 0, 0, 0.6); */
+`
+
+export const ButtonModalPerfil = styled.TouchableOpacity`
 /* border: 2px solid black; */
 width: 77px;
 height: 80px;

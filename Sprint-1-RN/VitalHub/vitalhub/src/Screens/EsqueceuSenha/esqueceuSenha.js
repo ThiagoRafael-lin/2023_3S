@@ -6,7 +6,9 @@ import { Input } from "../../components/Input/style"
 import { ButtonRecuperar, ButtonTitle } from "../../components/Button/style"
 import { ContentAccount, LinkMidium } from "../../components/LinkCadastro/style"
 
-export const esqueceuSuaSenha = ({navigation}) => {
+export const esqueceuSuaSenha = ({ navigation }) => {
+
+    
     return (
 
         <Container>
@@ -27,11 +29,8 @@ export const esqueceuSuaSenha = ({navigation}) => {
 
             />
 
-            <ButtonRecuperar>
-                <ButtonTitle
-                    onPress={() => navigation.replace('verificarEmail')} //funcionalidade de passar de tela não funcionando
-
-                    >
+            <ButtonRecuperar onPress={() => navigation.replace('verificarEmail')} >
+                <ButtonTitle>
                     Continuar
                 </ButtonTitle>
             </ButtonRecuperar>
@@ -39,7 +38,7 @@ export const esqueceuSuaSenha = ({navigation}) => {
 
             <ContentAccount>
                 <LinkMidium
-                onPress={() => navigation.navigate('Login')}
+                    onPress={() => navigation.navigate('Login')}
                 >
                     Cancelar
                 </LinkMidium>

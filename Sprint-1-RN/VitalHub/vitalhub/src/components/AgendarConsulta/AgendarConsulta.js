@@ -9,6 +9,7 @@ import { ScheduleModal, ScheduleModalAgendarConsulta } from "../ScheduleAppointm
 export const AgendarConsulta = ({
     visible,
     setShowModalAgendarConsulta,
+    navigation,
     ...rest
 }) => {
     return (
@@ -86,11 +87,11 @@ export const AgendarConsulta = ({
 
                         {/* titulo do conteudo */}
 
-                        <ButtonModalAgendarConsulta>
+                        <ButtonModalAgendarConsulta onPress={() => navigation.navigate('HomePaciente')}>
                             <ButtonTitle>Continuar</ButtonTitle>
                         </ButtonModalAgendarConsulta>
 
-                        <ButtonSecondaryClinica onPress={() => setShowModalAgendarConsulta(false)}>
+                        <ButtonSecondaryClinica onPress={() => navigation.navigate('HomePaciente')}>
                             <LinkMidiumModal>Cancelar</LinkMidiumModal>
                         </ButtonSecondaryClinica>
 

@@ -11,6 +11,7 @@ import { InputNivel, ScheduleInput } from "../Input/style";
 export const ScheduleAppointment = ({
     visible,
     setShowModalSchedule,
+    navigation,
     ...rest
 }) => {
     return (
@@ -59,7 +60,7 @@ export const ScheduleAppointment = ({
 
                     </ScheduleLocalizacao>
 
-                    <ButtonModal>
+                    <ButtonModal onPress={() => navigation.navigate('SelecionarClinica')}>
                         <ButtonTitle>Continuar</ButtonTitle>
                     </ButtonModal>
 

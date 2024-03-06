@@ -25,6 +25,7 @@ import { LocalConsulta } from './src/Screens/LocalConsulta/LocalConsulta';
 import { CriarAConta } from './src/Screens/CriarAConta/CriarAConta';
 import { VisualizarProntuario } from './src/Screens/VisualizarProntuario/VisualizarProntuario';
 import { Main } from './src/Screens/Main/Main';
+import { ModalMedicalRecord } from './src/components/ModalMedicalRecord/ModalMedicalRecord';
 
 export default function App() {
 
@@ -72,6 +73,16 @@ export default function App() {
           component={Main}
         />
 
+        <Stack.Screen
+          name='CriarAConta'
+          component={CriarAConta}
+        />
+
+        <Stack.Screen
+          name='ModalMedicalRecord'
+          component={ModalMedicalRecord}
+        />
+
         {/* <Stack.Screen
 
           name="navegacao"
@@ -105,13 +116,13 @@ export default function App() {
 
         />
 
-        <Stack.Screen
+        {/* <Stack.Screen
 
           name="CriarAConta"
           component={CriarAConta}
           options={{ title: "CriarAConta" }}
 
-        />
+        /> */}
 
         <Stack.Screen
 

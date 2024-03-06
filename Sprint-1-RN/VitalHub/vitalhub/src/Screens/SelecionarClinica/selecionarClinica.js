@@ -4,7 +4,7 @@ import { TitleClinica } from "../../components/Title/style"
 import { ButtonModal, ButtonSecondaryClinica, ButtonTitle } from "../../components/Button/style";
 import { LinkMidiumModal } from "../../components/CancellationModal/style";
 
-export const SelecionarClinica = () => {
+export const SelecionarClinica = ({ navigation }) => {
     return (
 
         // Container
@@ -29,11 +29,11 @@ export const SelecionarClinica = () => {
                 localidade={"Taboão, SP"}
             />
 
-            <ButtonModal>
+            <ButtonModal  onPress={() => navigation.replace('SelecionarData')}>
                 <ButtonTitle>Continuar</ButtonTitle>
             </ButtonModal>
 
-            <ButtonSecondaryClinica>
+            <ButtonSecondaryClinica onPress={() => navigation.navigate('HomePaciente')}>
                 <LinkMidiumModal>Cancelar</LinkMidiumModal>
             </ButtonSecondaryClinica>
 

@@ -7,7 +7,7 @@ import { ButtonSecondaryClinica, ButtonSecondaryLocal, ButtonSecondaryLocalConsu
 import { LinkMidiumModal } from "../../components/CancellationModal/style";
 
 
-export const LocalConsulta = () => {
+export const LocalConsulta = ({ navigation }) => {
     return (
 
 
@@ -64,7 +64,7 @@ export const LocalConsulta = () => {
 
                 </LocalContainerContent>
 
-                <ButtonSecondaryLocalConsulta>
+                <ButtonSecondaryLocalConsulta onPress={() => navigation.navigate('HomePaciente')}>
                     <LinkMidiumModal>Voltar</LinkMidiumModal>
                 </ButtonSecondaryLocalConsulta>
 

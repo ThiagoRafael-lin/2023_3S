@@ -6,7 +6,7 @@ import { InputRedefinir } from "../../components/Input/style"
 import { ButtonRecuperar, ButtonTitle } from "../../components/Button/style"
 
 
-export const redefinirSenha = () => {
+export const redefinirSenha = ({navigation}) => {
     return (
         <Container>
 
@@ -28,7 +28,7 @@ export const redefinirSenha = () => {
                 placeholder='Confirmar nova senha'
             />
 
-            <ButtonRecuperar>
+            <ButtonRecuperar onPress={() => navigation.replace('Login')}>
                 <ButtonTitle>
                     Confirmar nova senha
                 </ButtonTitle>

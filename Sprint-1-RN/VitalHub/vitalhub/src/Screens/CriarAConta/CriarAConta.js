@@ -6,7 +6,8 @@ import { Logo } from "../../components/Logo/style"
 import { Title } from "../../components/Title/style"
 import { TextCriar } from "../../components/Text/style"
 
-export const CriarAConta = ({navigation}) => {
+export const CriarAConta = ({ navigation }) => {
+    
     return (
 
         <Container>
@@ -35,11 +36,8 @@ export const CriarAConta = ({navigation}) => {
                 placeholder='Confirmar senha'
             />
 
-            <ButtonRecuperar>
-                <ButtonTitle
-                    onPress={() => navigation.navigate('verificarEmail')} //funcionalidade de passar de tela não funcionando
-
-                >
+            <ButtonRecuperar onPress={() => navigation.replace('Login')}>
+                <ButtonTitle>
                     Cadastrar
                 </ButtonTitle>
             </ButtonRecuperar>
@@ -47,7 +45,7 @@ export const CriarAConta = ({navigation}) => {
 
             <ContentAccount>
                 <LinkMidium
-                onPress={() => navigation.navigate('Login')}
+                    onPress={() => navigation.replace('Login')}
                 >
                     Cancelar
                 </LinkMidium>

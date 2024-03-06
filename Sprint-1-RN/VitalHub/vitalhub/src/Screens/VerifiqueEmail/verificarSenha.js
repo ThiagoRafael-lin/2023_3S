@@ -6,7 +6,7 @@ import { InputVerificar } from "../../components/Input/style"
 import { ButtonRecuperar, ButtonTitle } from "../../components/Button/style"
 import { ContentAccount, LinkMidium } from "../../components/LinkCadastro/style"
 
-export const verificarEmail = () => {
+export const verificarEmail = ({ navigation }) => {
     return (
         <Container>
 
@@ -40,10 +40,8 @@ export const verificarEmail = () => {
 
             </ContainerVerificacao>
 
-            <ButtonRecuperar>
-                <ButtonTitle
-
-                >
+            <ButtonRecuperar onPress={() => navigation.replace('redefinirSenha')}>
+                <ButtonTitle>
                     Entrar
                 </ButtonTitle>
             </ButtonRecuperar>
