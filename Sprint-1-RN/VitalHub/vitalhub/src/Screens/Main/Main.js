@@ -18,8 +18,8 @@ export const Main = () => {
 
         <BottomTab.Navigator
 
-            initialRouteName='HomePaciente'
-            // initialRouteName='Home'
+            // initialRouteName='HomePaciente'
+            initialRouteName='Home'
 
             screenOptions={({ route }) => ({
                 tabBarStyle: { backgroundColor: "#ffffff", height: 80, paddingTop: 10 },
@@ -28,7 +28,7 @@ export const Main = () => {
                 headerShown: false,
 
                 tabBarIcon: ({ focused }) => {
-                    if (route.name === "HomePaciente"/*HomePaciente */) {
+                    if (route.name === "Home"/*HomePaciente */) {
 
                         return (
                             <ContentIcon
@@ -60,17 +60,17 @@ export const Main = () => {
 
 
             <BottomTab.Screen
-                name="HomePaciente"
-                // name="Home"
-                component={HomePaciente}
-                // component={Home}
+                // name="HomePaciente"
+                name="Home"
+                // component={HomePaciente}
+                component={Home}
             />
 
             <BottomTab.Screen
-                name="perfil"
-                // name="PerfilMedico"
-                component={Perfil}
-                // component={PerfilMedico}
+                // name="perfil"
+                name="PerfilMedico"
+                // component={Perfil}
+                component={PerfilMedico}
             />
 
         </BottomTab.Navigator>

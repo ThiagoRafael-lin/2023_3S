@@ -43,7 +43,7 @@ export const MedicalRecordModal = ({
                     </RecordModalInfo>
 
                     {/* botão Confirmar */}
-                    <ButtonModal>
+                    <ButtonModal onPress={() => navigation.navigate('Prontuario')}>
 
                         {/* titulo do botão */}
                         <ButtonTitle>Inserir Prontuário</ButtonTitle>
@@ -51,7 +51,7 @@ export const MedicalRecordModal = ({
                     </ButtonModal>
 
                     {/* botão cancelar */}
-                    <ButtonSecondary onPress={setShowModalAppointment}>
+                    <ButtonSecondary onPress={() => navigation.navigate('Home')}/*onPress={setShowModalAppointment}*/>
 
                         {/* titulo do botão */}
                         <LinkMidiumModal>Cancelar</LinkMidiumModal>

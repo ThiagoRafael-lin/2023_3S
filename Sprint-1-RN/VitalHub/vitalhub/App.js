@@ -27,6 +27,8 @@ import { VisualizarProntuario } from './src/Screens/VisualizarProntuario/Visuali
 import { Main } from './src/Screens/Main/Main';
 import { ModalMedicalRecord } from './src/components/ModalMedicalRecord/ModalMedicalRecord';
 import { PerfilMedico } from './src/Screens/PerfilMedico/PerfilMedico';
+import { MedicalRecordModal } from './src/components/MedicalRecordModal/MedicalRecordModal';
+import { ProntuarioPreenchido } from './src/Screens/ProntuarioPreenchido/ProntuarioPreenchido';
 
 export default function App() {
 
@@ -86,6 +88,14 @@ export default function App() {
         <Stack.Screen
           name='PerfilMedico'
           component={PerfilMedico}
+        />
+        <Stack.Screen
+          name='MedicalRecordModal'
+          component={MedicalRecordModal}
+        />
+        <Stack.Screen
+          name='ProntuarioPreenchido'
+          component={ProntuarioPreenchido}
         />
 
         {/* <Stack.Screen

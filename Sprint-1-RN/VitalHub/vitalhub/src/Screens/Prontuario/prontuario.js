@@ -5,7 +5,7 @@ import { InputPerfilPerfil, InputProntuario, InputProntuarioDiag, LabelInput, La
 import { ContentAccount, ContentAccountProtuario, LinkMidium, LinkMidiumPront } from '../../components/LinkCadastro/style'
 import { PerfilImage } from '../../components/PerfilImage/style'
 
-export const Prontuario = () => {
+export const Prontuario = ({ navigation }) => {
     return (
 
         <ScroolForm>
@@ -21,7 +21,7 @@ export const Prontuario = () => {
                         Richard Kosta
                     </TextInputShadow>
                     <TextInputShadowEmail>
-                       22 anos richard.kosta@gmail.com
+                        22 anos richard.kosta@gmail.com
                     </TextInputShadowEmail>
                 </InputBoxShadow>
 
@@ -68,7 +68,7 @@ export const Prontuario = () => {
                     </ButtonTitle>
                 </ButtonPerfil>
 
-                <ButtonPerfilSair>
+                <ButtonPerfilSair onPress={() => navigation.replace('ProntuarioPreenchido')}>
                     <ButtonTitle>
                         Editar
                     </ButtonTitle>

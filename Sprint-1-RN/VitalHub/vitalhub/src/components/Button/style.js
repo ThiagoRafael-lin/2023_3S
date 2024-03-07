@@ -59,6 +59,15 @@ margin-bottom: 40px;
 
 `
 
+export const ButtonPerfilProntuarioPreenchido = styled(Button)`
+width: 90%;
+background-color: #496BBA;
+border-color: #496BBA;
+margin-top: 20px;
+margin-bottom: 40px;
+
+`
+
 export const ButtonModal = styled(Button)`
 width: 80%;
 margin-top: 70px;
