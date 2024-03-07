@@ -9,6 +9,9 @@ import { FontAwesome, FontAwesome5 } from '@expo/vector-icons'
 
 import { Perfil } from '../Perfil/perfil';
 import { HomePaciente } from '../HomePaciente/HomePaciente';
+import { Home } from '../Home/home';
+import { PerfilMedico } from '../PerfilMedico/PerfilMedico';
+
 
 export const Main = () => {
     return (
@@ -16,6 +19,7 @@ export const Main = () => {
         <BottomTab.Navigator
 
             initialRouteName='HomePaciente'
+            // initialRouteName='Home'
 
             screenOptions={({ route }) => ({
                 tabBarStyle: { backgroundColor: "#ffffff", height: 80, paddingTop: 10 },
@@ -24,7 +28,7 @@ export const Main = () => {
                 headerShown: false,
 
                 tabBarIcon: ({ focused }) => {
-                    if (route.name === "HomePaciente") {
+                    if (route.name === "HomePaciente"/*HomePaciente */) {
 
                         return (
                             <ContentIcon
@@ -37,16 +41,16 @@ export const Main = () => {
                             </ContentIcon>
                         )
 
-                    } else route.name === "perfil"
+                    } else route.name === "Perfil" /* Perfil */
                     {
-                        return(
+                        return (
                             <ContentIcon
-                            tabBarActiveBackgroundColor={focused ? "#ECF2FF" : "transparent"}
-                        >
-                            <FontAwesome5 name="user-circle" size={18} color={focused ? "#607EC5" : "#4E4b59"} />
-                            {focused && <TextIcon>Perfil</TextIcon>}
+                                tabBarActiveBackgroundColor={focused ? "#ECF2FF" : "transparent"}
+                            >
+                                <FontAwesome5 name="user-circle" size={18} color={focused ? "#607EC5" : "#4E4b59"} />
+                                {focused && <TextIcon>Perfil</TextIcon>}
 
-                        </ContentIcon>
+                            </ContentIcon>
                         )
                     }
                 }
@@ -57,13 +61,16 @@ export const Main = () => {
 
             <BottomTab.Screen
                 name="HomePaciente"
+                // name="Home"
                 component={HomePaciente}
+                // component={Home}
             />
-
 
             <BottomTab.Screen
                 name="perfil"
+                // name="PerfilMedico"
                 component={Perfil}
+                // component={PerfilMedico}
             />
 
         </BottomTab.Navigator>

@@ -2,6 +2,7 @@ import { Container } from "../Containers/style"
 import { AntDesign } from '@expo/vector-icons';
 import { ButtonCard, ButtonText, ClockCard, ContainerCardList, ContentCard, DataProfileCard, ProfileData, ProfileImage, ProfileName, TextAge, TextBold, ViewRow } from "./style";
 import { ButtonModalVerProntuario } from "../Button/style";
+import { useState } from "react";
 
 export const AppointmentCard = ({
     situacao = "pendente",
@@ -11,8 +12,11 @@ export const AppointmentCard = ({
     onPress,
     name,
     navigation,
-    
+
 }) => {
+
+    const [profile, setProfile] = useState("Paciente")
+
     return (
         //Container principal
         <ContainerCardList >
@@ -59,11 +63,29 @@ export const AppointmentCard = ({
                                 <ButtonText situacao={situacao}>Cancelar</ButtonText>
                             </ButtonCard>
                         ) : (
-                            <ButtonCard onPress={onPressAppointment}>
+                            <ButtonCard onPress={profile !== "Paciente" ? onPressAppointment : () => navigation.replace("Prontuario")}>
                                 <ButtonText situacao={situacao} onPress={() => navigation.replace('VisualizarProntuario')}>Ver prontuário</ButtonText>
                             </ButtonCard>
                         )
                     }
+
+
+                    {/* versão antiga pelo que sei funcionando */}
+
+                    {/* {
+                        situacao == "cancelado" ? (
+                            <>
+                            </>
+                        ) : situacao == "pendente" ? (
+                            <ButtonCard onPress={onPressCancel}>
+                                <ButtonText situacao={situacao}>Cancelar</ButtonText>
+                            </ButtonCard>
+                        ) : (
+                            <ButtonCard onPress={onPressAppointment}>
+                                <ButtonText situacao={situacao} onPress={() => navigation.replace('VisualizarProntuario')}>Ver prontuário</ButtonText>
+                            </ButtonCard>
+                        )
+                    } */}
 
 
 

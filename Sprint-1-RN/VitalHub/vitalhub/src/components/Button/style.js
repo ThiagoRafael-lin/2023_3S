@@ -39,6 +39,14 @@ export const ButtonPerfil = styled(Button)`
 
 gap: 30px;
 margin-top: 20px;
+
+`
+export const ButtonPerfilMedico = styled(Button)`
+
+gap: 30px;
+margin-top: 20px;
+margin-bottom: 20px;
+
 `
 
 export const ButtonPerfilSair = styled(Button)`

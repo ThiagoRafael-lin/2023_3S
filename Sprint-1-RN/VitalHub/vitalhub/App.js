@@ -26,6 +26,7 @@ import { CriarAConta } from './src/Screens/CriarAConta/CriarAConta';
 import { VisualizarProntuario } from './src/Screens/VisualizarProntuario/VisualizarProntuario';
 import { Main } from './src/Screens/Main/Main';
 import { ModalMedicalRecord } from './src/components/ModalMedicalRecord/ModalMedicalRecord';
+import { PerfilMedico } from './src/Screens/PerfilMedico/PerfilMedico';
 
 export default function App() {
 
@@ -81,6 +82,10 @@ export default function App() {
         <Stack.Screen
           name='ModalMedicalRecord'
           component={ModalMedicalRecord}
+        />
+        <Stack.Screen
+          name='PerfilMedico'
+          component={PerfilMedico}
         />
 
         {/* <Stack.Screen

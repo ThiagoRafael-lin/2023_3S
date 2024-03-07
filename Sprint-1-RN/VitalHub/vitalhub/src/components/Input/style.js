@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const Input = styled.TextInput.attrs({
     placeholderTextColor: "white"
 })
-`
+    `
 margin-top: 30px;
 border: 1px;
 border-radius: 5px;
@@ -39,7 +39,7 @@ border-color: white;
 
 `
 
-export const  InputBoxShadow = styled.SafeAreaView`
+export const InputBoxShadow = styled.SafeAreaView`
 
 margin-top: -52px;
 background-color: white;
@@ -68,6 +68,14 @@ font-size: 16px;
 
 `
 
+export const TextInputPerfilMedico = styled.Text`
+font-family: MontserratAlternates_600SemiBold;
+font-size: 16px;
+margin-top: 20px;
+margin-bottom: 10px;
+
+`
+
 export const TextInputTitle = styled(TextInputShadow)`
 
 font-size: 20px;
@@ -76,6 +84,12 @@ font-size: 20px;
 export const TextInputShadowEmail = styled(TextInputShadow)`
 
 font-family: Quicksand_500Medium;
+
+`
+
+export const TextInputCRMMedico = styled.Text`
+font-family: Quicksand_500Medium;
+color: #5F5C6B;
 
 `
 

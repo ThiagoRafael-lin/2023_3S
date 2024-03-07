@@ -19,7 +19,7 @@ const Consultas = [
 
 ];
 
-export const Home = () => {
+export const Home = ({ navigation }) => {
 
     // state para o estado da lista(cards)
     const [statusLista, setStatusLista] = useState("pendente");
@@ -34,7 +34,10 @@ export const Home = () => {
         <ContainerConsulta>
 
             {/* Header */}
-            <Header />
+            <Header
+                navigation={navigation}
+
+            />
 
             {/* CalendarHome */}
             <CalendarHome />
@@ -73,6 +76,7 @@ export const Home = () => {
                             situacao={item.situacao}
                             onPressCancel={() => setShowModalCancel(true)}
                             onPressAppointment={() => setShowModalAppointment(true)}
+                            navigation={navigation}
 
                         />
                     )
@@ -84,6 +88,7 @@ export const Home = () => {
             <CancellationModal
                 visible={showModalCancel}
                 setShowModalCancel={setShowModalCancel}
+                navigation={navigation}
             />
 
 

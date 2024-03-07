@@ -10,6 +10,7 @@ import { ButtonModal, ButtonTitle } from "../Button/style"
 export const CancellationModal = ({
     visible,
     setShowModalCancel,
+    navigation,
     ...rest
 }) => {
     return (
@@ -26,7 +27,7 @@ export const CancellationModal = ({
                         </ModalText>
 
                         {/* Button */}
-                        <ButtonModalCancellation>
+                        <ButtonModalCancellation onPress={() => setShowModalCancel(false)}>
                             <ButtonTitle>Confirmar</ButtonTitle>
                         </ButtonModalCancellation>
 
