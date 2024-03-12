@@ -30,12 +30,16 @@ export const MapLocation = () => {
                     title='Meu local'
                 />
 
+                        {/* fazer mapDirection */}
+
+
                 <Marker
                     coordinate={{
                         latitude: -26.615034,
                         longitude: -48.570755,
                     }}
-                    title='Meu local'
+                    title='clinica'
+                    pinColor="blue"
                 />
 
             </MapView>
