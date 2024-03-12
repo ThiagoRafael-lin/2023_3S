@@ -5,6 +5,7 @@ import { LocalTitulo } from '../../components/Title/style'
 import { LocalConsultaContent, LocalContainerContent, Mapa } from './style'
 import { ButtonSecondaryClinica, ButtonSecondaryLocal, ButtonSecondaryLocalConsulta } from '../../components/Button/style';
 import { LinkMidiumModal } from "../../components/CancellationModal/style";
+import { MapLocation } from '../../components/MapLocation/MapLocation'
 
 
 export const LocalConsulta = ({ navigation }) => {
@@ -15,9 +16,13 @@ export const LocalConsulta = ({ navigation }) => {
         <LocalConsultaContainer>
 
             {/* imagem do mapa */}
-            <Mapa
+            {/* <Mapa
                 source={require('../../../assets/Mapa.png')}
 
+            /> */}
+
+            <MapLocation
+            
             />
 
             {/* conteudo */}

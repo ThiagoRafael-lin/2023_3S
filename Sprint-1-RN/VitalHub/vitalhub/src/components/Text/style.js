@@ -196,3 +196,7 @@ export const InputProntuarioDesc = styled(InputProntuarioVisu)`
 height: 70px;
 
 `
+
+export const TextMaps = styled.Text`
+font-size: 12px;
+`

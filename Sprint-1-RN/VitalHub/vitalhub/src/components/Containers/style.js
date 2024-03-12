@@ -205,6 +205,13 @@ justify-content: center;
 
 export const ContainerVisu = styled.View`
 width: 100%;
+
+`
+
+export const MapLocationContainer = styled.View`
+width :100%;
+height: 30%;
+
 `
 
 export const ContainerHeader = styled(LinearGradient).attrs({
