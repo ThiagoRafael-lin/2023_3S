@@ -176,3 +176,9 @@ border-radius: 5px;
 
 /* background-color: rgba(0, 0, 0, 0.6); */
 `
+
+export const ButtonCamera = styled.TouchableOpacity`
+width: 30%;
+height: 20%;
+border-radius: 5px;
+`

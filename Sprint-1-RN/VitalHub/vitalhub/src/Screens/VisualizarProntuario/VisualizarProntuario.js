@@ -1,4 +1,4 @@
-import { ButtonModalVizualizarProntuario, ButtonPerfil, ButtonPerfilSair, ButtonSecondaryLocal, ButtonSecondaryVisu, ButtonSecondaryVisualizar, ButtonTitle, ButtonTitleVizualizar } from '../../components/Button/style'
+import { ButtonCamera, ButtonModalVizualizarProntuario, ButtonPerfil, ButtonPerfilSair, ButtonSecondaryLocal, ButtonSecondaryVisu, ButtonSecondaryVisualizar, ButtonTitle, ButtonTitleVizualizar } from '../../components/Button/style'
 import { LinkMidiumModal, LinkMidiumVisualizar } from '../../components/CancellationModal/style'
 import { ContainerPerfil, Line, ScroolForm } from '../../components/Containers/style'
 import { InputBoxShadow, TextInputShadow, TextInputShadowEmail, TextInputSubTitulo, TextInputTitle } from '../../components/Input/style'
@@ -7,7 +7,7 @@ import { Logo, LogoVisu } from '../../components/Logo/style'
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { InputProntuarioDesc, InputProntuarioVisu } from '../../components/Text/style'
 
-export const VisualizarProntuario = () => {
+export const VisualizarProntuario = ({ navigation }) => {
     return (
 
         <ScroolForm>
@@ -63,11 +63,15 @@ export const VisualizarProntuario = () => {
                     Nenhuma foto informada
                 </InputProntuarioExame>
 
-                <ButtonModalVizualizarProntuario>
-                    <MaterialCommunityIcons name="camera-plus-outline" size={24} color="#fff" />
-                    <ButtonTitleVizualizar>Enviar</ButtonTitleVizualizar>
+                <ButtonCamera onPress={() => navigation.navigate('Camera')}>
 
-                </ButtonModalVizualizarProntuario>
+                    <ButtonModalVizualizarProntuario>
+                        <MaterialCommunityIcons name="camera-plus-outline" size={24} color="#fff" />
+                        <ButtonTitleVizualizar>Enviar</ButtonTitleVizualizar>
+                    </ButtonModalVizualizarProntuario>
+
+                </ButtonCamera>
+
                 <ButtonSecondaryVisu>
                     <LinkMidiumVisualizar>Cancelar</LinkMidiumVisualizar>
                 </ButtonSecondaryVisu>

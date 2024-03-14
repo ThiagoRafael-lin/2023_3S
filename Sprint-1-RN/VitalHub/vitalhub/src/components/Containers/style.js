@@ -214,6 +214,14 @@ height: 30%;
 
 `
 
+export const CameraContainer =styled.View`
+width: 100%;
+height: 80%;
+justify-content: center;
+align-items: center;
+
+`
+
 export const ContainerHeader = styled(LinearGradient).attrs({
     colors: ["#60bfc5", "#496BBA"],
     start: {x: -0.05, y: 1.08},
