@@ -29,6 +29,7 @@ import { ModalMedicalRecord } from './src/components/ModalMedicalRecord/ModalMed
 import { PerfilMedico } from './src/Screens/PerfilMedico/PerfilMedico';
 import { MedicalRecordModal } from './src/components/MedicalRecordModal/MedicalRecordModal';
 import { ProntuarioPreenchido } from './src/Screens/ProntuarioPreenchido/ProntuarioPreenchido';
+import { CameraExpo, CameraVisualizar } from './src/components/CameraVisualizar/CameraVisualizar';
 
 export default function App() {
 
@@ -97,6 +98,14 @@ export default function App() {
           name='ProntuarioPreenchido'
           component={ProntuarioPreenchido}
         />
+        <Stack.Screen
+          name='VisualizarProntuario'
+          component={VisualizarProntuario}
+        />
+        {/* <Stack.Screen
+          name='CameraExpo'
+          component={CameraExpo}
+        /> */}
 
         {/* <Stack.Screen
 
@@ -195,13 +204,13 @@ export default function App() {
           options={{ title: "LocalConsulta" }}
 
         />
-        <Stack.Screen
+        {/* <Stack.Screen
 
           name="VisualizarProntuario"
           component={VisualizarProntuario}
           options={{ title: "VisualizarProntuario" }}
 
-        />
+        /> */}
 
 
       </Stack.Navigator>

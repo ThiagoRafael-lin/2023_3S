@@ -6,8 +6,13 @@ import { InputProntuario, InputProntuarioDiag, InputProntuarioDiagPaciente, Inpu
 import { Logo, LogoVisu } from '../../components/Logo/style'
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { InputProntuarioDesc, InputProntuarioVisu } from '../../components/Text/style'
+import { useState } from 'react'
+import { CameraExpo } from '../../components/CameraVisualizar/CameraVisualizar'
 
 export const VisualizarProntuario = ({ navigation }) => {
+
+    const [showModalCamera, setShowModalCamera] = useState(false)
+
     return (
 
         <ScroolForm>
@@ -63,14 +68,19 @@ export const VisualizarProntuario = ({ navigation }) => {
                     Nenhuma foto informada
                 </InputProntuarioExame>
 
-                <ButtonCamera onPress={() => navigation.navigate('Camera')}>
 
-                    <ButtonModalVizualizarProntuario>
+                <CameraExpo
+                    visible={showModalCamera}
+                    setShowModalCamera={setShowModalCamera}
+                />
+
+                <ButtonModalVizualizarProntuario>
+                    <ButtonCamera onPress={() => setShowModalCamera(true)}>
                         <MaterialCommunityIcons name="camera-plus-outline" size={24} color="#fff" />
                         <ButtonTitleVizualizar>Enviar</ButtonTitleVizualizar>
-                    </ButtonModalVizualizarProntuario>
+                    </ButtonCamera>
+                </ButtonModalVizualizarProntuario>
 
-                </ButtonCamera>
 
                 <ButtonSecondaryVisu>
                     <LinkMidiumVisualizar>Cancelar</LinkMidiumVisualizar>

@@ -178,7 +178,9 @@ border-radius: 5px;
 `
 
 export const ButtonCamera = styled.TouchableOpacity`
-width: 30%;
-height: 20%;
-border-radius: 5px;
+flex-direction: row;
+align-self: flex-start;
+gap: 5px;
+align-items: center;
+
 `
