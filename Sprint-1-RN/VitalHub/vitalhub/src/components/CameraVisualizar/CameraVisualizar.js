@@ -52,7 +52,18 @@ export function CameraExpo({
                             <Text style={styles.textFlip}>Trocar</Text>
                         </TouchableOpacity>
                     </View>
+
                 </Camera>
+                <View style={styles.btns}>
+                    <TouchableOpacity >
+                        <Text style={styles.btnEnviar}>Enviar</Text>
+                    </TouchableOpacity>
+                    
+                    <TouchableOpacity >
+                        <Text>Cancelar</Text>
+                    </TouchableOpacity>
+
+                </View>
 
                 <TouchableOpacity onPress={() => capturePhoto()} style={styles.btnCapture}>
                     <FontAwesome name="camera" size={24} color="#fff" />
@@ -88,8 +99,22 @@ const styles = StyleSheet.create({
         alignItems: 'flex-end',
         justifyContent: 'center',
     },
-    btnFlip: {
+    btns: {
         padding: 20,
+        flexDirection: 'row',
+        gap: 80,
+        alignItems: 'center',
+    },
+    btnEnviar: {
+        backgroundColor: '#49B3BA',
+        borderRadius: 10,
+        padding: 10,
+        color: 'white',
+        width: '140%',
+        textAlign: 'center',
+    },
+    btnFlip: {
+        padding: 10,
     },
     textFlip: {
         fontSize: 20,
