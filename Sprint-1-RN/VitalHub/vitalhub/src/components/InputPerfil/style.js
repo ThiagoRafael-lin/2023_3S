@@ -52,6 +52,18 @@ padding-right: 10px;
 
 `
 
+export const ContainerFoto = styled.View`
+    width: 90%;
+    height: 111px;
+    background-color: #F5F3F3;
+    border-radius: 5px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 30px;
+`
+
 
 // export const InputProntuarioVisu = styled(InputProntuario).attrs({
 //     placeholderTextColor: "#000"

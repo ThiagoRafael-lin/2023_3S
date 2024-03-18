@@ -102,6 +102,10 @@ export default function App() {
           name='VisualizarProntuario'
           component={VisualizarProntuario}
         />
+        <Stack.Screen
+          name='CameraExpo'
+          component={CameraExpo}
+        />
         {/* <Stack.Screen
           name='CameraExpo'
           component={CameraExpo}

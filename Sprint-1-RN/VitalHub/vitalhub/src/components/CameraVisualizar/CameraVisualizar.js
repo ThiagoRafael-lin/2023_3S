@@ -10,6 +10,8 @@ import { CameraContainer } from '../Containers/style';
 export function CameraExpo({
     visible,
     setShowModalCamera,
+    navigation,
+    setCameraCapture,
     ...rest
 }) {
 
@@ -17,7 +19,28 @@ export function CameraExpo({
     const cameraRef = useRef(null)
     const [tipoCamera, setTipoCamera] = useState(CameraType.front)
     const [openModal, setOpenModal] = useState(false)
+
     const [photo, setPhoto] = useState(null)
+
+    const takePicture = async () => {
+        if (cameraRef) {
+            const photo = await cameraRef.current.takePictureAsync();
+            setPhoto(photo.uri);
+        }
+    }
+
+    async function obterImage() {
+        await setCameraCapture(photo)
+        close()
+    }
+
+    function close() {
+        setShowModalCamera(false)
+    }
+    function clearPhoto() {
+        setPhoto(null)
+        setShowModalCamera(false)
+    }
 
     useEffect(() => {
         (async () => {
@@ -54,16 +77,7 @@ export function CameraExpo({
                     </View>
 
                 </Camera>
-                <View style={styles.btns}>
-                    <TouchableOpacity >
-                        <Text style={styles.btnEnviar}>Enviar</Text>
-                    </TouchableOpacity>
-                    
-                    <TouchableOpacity >
-                        <Text>Cancelar</Text>
-                    </TouchableOpacity>
 
-                </View>
 
                 <TouchableOpacity onPress={() => capturePhoto()} style={styles.btnCapture}>
                     <FontAwesome name="camera" size={24} color="#fff" />
@@ -79,6 +93,18 @@ export function CameraExpo({
                             source={{ uri: photo }}
                         />
                     </View>
+
+                    <View style={styles.btns}>
+
+                        <TouchableOpacity style={styles.btnContainer} onPress={() => obterImage() && clearPhoto()}>
+                            <Text style={styles.btnEnviar} >Enviar</Text>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity onPress={() => setShowModalCamera(false) && clearPhoto()}>
+                            <Text>Cancelar</Text>
+                        </TouchableOpacity>
+
+                    </View>
                 </Modal>
 
             </CameraContainer >
@@ -90,7 +116,7 @@ const styles = StyleSheet.create({
     camera: {
         flex: 1,
         width: '100%',
-        height: '%80'
+        height: '100%'
     },
     viewFlip: {
         flex: 1,
@@ -100,10 +126,18 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     btns: {
-        padding: 20,
+        // padding: 100,
         flexDirection: 'row',
         gap: 80,
         alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: "40%",
+        marginBottom: "40%",
+    },
+    btnContainer: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: "30%",
     },
     btnEnviar: {
         backgroundColor: '#49B3BA',

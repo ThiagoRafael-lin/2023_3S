@@ -2,16 +2,18 @@ import { ButtonCamera, ButtonModalVizualizarProntuario, ButtonPerfil, ButtonPerf
 import { LinkMidiumModal, LinkMidiumVisualizar } from '../../components/CancellationModal/style'
 import { ContainerPerfil, Line, ScroolForm } from '../../components/Containers/style'
 import { InputBoxShadow, TextInputShadow, TextInputShadowEmail, TextInputSubTitulo, TextInputTitle } from '../../components/Input/style'
-import { InputProntuario, InputProntuarioDiag, InputProntuarioDiagPaciente, InputProntuarioExame, InputProntuarioPrescri, InputProntuarioResultado, LabelInput, LabelProntuarioDesc, LabelProntuarioDiag, LabelProntuarioExames, LabelProntuarioVisu } from '../../components/InputPerfil/style'
+import { ContainerFoto, InputProntuario, InputProntuarioDiag, InputProntuarioDiagPaciente, InputProntuarioExame, InputProntuarioPrescri, InputProntuarioResultado, LabelInput, LabelProntuarioDesc, LabelProntuarioDiag, LabelProntuarioExames, LabelProntuarioVisu } from '../../components/InputPerfil/style'
 import { Logo, LogoVisu } from '../../components/Logo/style'
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { InputProntuarioDesc, InputProntuarioVisu } from '../../components/Text/style'
 import { useState } from 'react'
 import { CameraExpo } from '../../components/CameraVisualizar/CameraVisualizar'
+import { Image } from 'react-native'
 
 export const VisualizarProntuario = ({ navigation }) => {
 
     const [showModalCamera, setShowModalCamera] = useState(false)
+    const [cameraCapture, setCameraCapture] = useState(null)
 
     return (
 
@@ -63,15 +65,15 @@ export const VisualizarProntuario = ({ navigation }) => {
                     <LabelProntuarioExames>Exames médicos</LabelProntuarioExames>
 
                 </LabelInput>
-                <InputProntuarioExame>
-                    <MaterialCommunityIcons name="file-alert-outline" size={24} color="black" />
-                    Nenhuma foto informada
-                </InputProntuarioExame>
+                <ContainerFoto>
+                    <Image style={{width: '100%', height: 120, borderRadius: 5}} source={{uri: cameraCapture}} />
+                </ContainerFoto>
 
 
                 <CameraExpo
                     visible={showModalCamera}
                     setShowModalCamera={setShowModalCamera}
+                    setCameraCapture={setCameraCapture}
                 />
 
                 <ButtonModalVizualizarProntuario>
