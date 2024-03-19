@@ -1,56 +1,59 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-//importar recursos d expo-notifications
-import * as Notifications from 'expo-notifications'
+//ipmortar conteudo do expo notifications
+import * as Notification from "expo-notifications"
 
 //solicita permissões de notificação ao iniciar o app
-Notifications.requestPermissionsAsync();
+Notification.requestPermissionsAsync();
 
-//define como as notificações devem ser tratadas quando recebidas
-Notifications.setNotificationHandler({
+//define como as notificacoes devem ser tratadas quando recebidos valores
+Notification.setNotificationHandler({
   handleNotification: async () => ({
 
-    //mostrar o aletar quando a notificação for recebida
+    //Mostrar um alerta quando a notificacao for recebida
+    shouldShowAlert: true,
+
+    //Reproduz som ao receber a notificacao
     shouldPlaySound: true,
 
-    //reproduz som ao receber notificação
-    shouldPlaySound: false,
-
-    //número de notificação no icone do app
+    //Mostrar quantidade de notificacoes no icone do app
     shouldSetBadge: false
+
   })
-});
+})
 
 export default function App() {
 
-  //função para lidar com chamada de notificação
+  //funçao para lidar com a chamada de notificaçao
   const handleCallNotifications = async () => {
 
-    //obtém o status da permissão
-    const { status } = await Notifications.getPermissionsAsync();
+    //obtem o status da permissao
+    const { status } = await Notification.getPermissionsAsync();
 
-    //verifica se o usuario concedeu permissão
-    if (status !== 'granted') {
-      alert("você não deixou as notificações ativas")
+    //verifica se o usuario permitiu as notificaçoes
+    if (status != 'granted') {
+      alert('Você não ativou as notificações')
       return;
     }
 
     //Agenda uma notificação
-
-    await Notifications.scheduleNotificationAsync({
+    await Notification.scheduleNotificationAsync({
       content: {
-        title: 'Bem vindo ao SENAI !!',
-        body: 'Notificação recebida.'
+        title: "Bem vindo ao SENAI",
+        body: "Notificação recebida",
+        sound: "Notification.mp3"
       },
       trigger: null
     })
   }
 
+
+
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.button} onPress={handleCallNotifications}>
-        <Text style={styles.text}>Clique aqui !</Text>
+        <Text style={styles.texto}>Clique Aqui!</Text>
       </TouchableOpacity>
       <StatusBar style="auto" />
     </View>
@@ -65,16 +68,16 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   button: {
-    width: '80%',
+    width: "80%",
     height: 50,
     backgroundColor: 'red',
     alignItems: "center",
-    justifyContent: 'center',
+    justifyContent: "center",
     borderRadius: 10,
   },
-  text: {
-    color: '#FFF',
+  texto: {
+    color: "#fff",
     fontWeight: 'bold',
-    fontSize: 24,
+    fontSize: 24
   }
 });
