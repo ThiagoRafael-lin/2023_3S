@@ -1,2 +1,2 @@
 # 2023_3S
-3 Termo de Desenvolvimento de Sistemas
+Esse repositório foi criado para projetos do 3 semestre, feitos no Senai
